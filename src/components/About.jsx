@@ -26,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id='about' className="w-full bg-white mt-40 mb-3 px-4 md:px-12 font-sans relative overflow-hidden">
+    <section id='about' className="w-full bg-white mt-40  px-4 md:px-12 font-sans relative overflow-hidden">
       
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-30">
         
@@ -98,7 +98,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-[52px] font-medium text-[#1A1A1A]  mb-6 tracking-[-2px]"
+            className="text-4xl md:text-5xl lg:text-[52px] font-medium text-[#1A1A1A]  mb-5 tracking-[-2px]"
           >
             Hey! That’s me.
           </motion.h2>
@@ -108,7 +108,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-[#1D1D1D]  text-base md:text-lg leading-relaxed mb-6"
+            className="text-[#1D1D1D] font-[375] text-base md:text-lg leading-relaxed mb-5"
           >
             I am Younus, a multidisciplinary designer and blogger based in the vibrant city of Los Angeles. With a keen eye for aesthetics and a knack for innovative solutions, I thrive in the dynamic intersection of design.
           </motion.p>
@@ -118,13 +118,13 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-[#1D1D1D] text-base md:text-[17px] leading-[160%] mb-6"
+            className="text-[#1D1D1D] text-base md:text-[17px] leading-[160%] mb-[60px]"
           >
             My journey in this dynamic and ever-evolving field has been a testament to my unwavering passion for meticulously crafting meaningful user experiences, leveraging cutting-edge technologies, and fearlessly pushing the boundaries of digital creativity.
           </motion.p>
 
           {/* Skills Grid (2 Columns Layout with 12 Skills matching the reference design) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[28px] gap-y-[28px] w-full">
             {skills.map((skill, index) => (
               <motion.div 
                 key={skill.name}
@@ -135,11 +135,11 @@ const About = () => {
                 className="flex flex-col w-full"
               >
                 {/* Skill Title & Percentage */}
-                <div className="flex justify-between items-center mb-[16px]">
-                  <span className="text-sm md:text-[15px] font-medium text-[#1D1D1D]">
+                <div className="flex justify-between items-center mb-[10px]">
+                  <span className="text-sm md:text-[16px] font-[375] text-[#1D1D1D]">
                     {skill.name}
                   </span>
-                  <span className="text-sm md:text-[15px] font-medium text-[#1D1D1D]">
+                  <span className="text-sm md:text-[16px] font-[375] text-[#1D1D1D]">
                     {skill.level}
                   </span>
                 </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import arrow from '../assets/bannerarrow.svg'
 
 // Assets folder theke quote icon ar user image gulo import kore nio
 import quoteIcon from '../assets/quote-icon.svg';
@@ -14,7 +15,7 @@ const Review = () => {
     {
       id: 1,
       quote:
-        "“From the very beginning the collaboration felt effortless. Every idea was carefully refined into something meaningful, and the final result was exactly what we hoped for.”",
+        "“Working with Younus was effortless from day one. He consistently turned ideas into thoughtful, polished designs, bringing clarity to every challenge and delivering results that exceeded our expectations.”",
       name: "Natalie Brooks",
       role: "Marketing Manager",
       image: user1,
@@ -22,7 +23,7 @@ const Review = () => {
     {
       id: 2,
       quote:
-        "“Working together was an absolute game-changer for our brand. The attention to detail and creative execution exceeded all our expectations.”",
+        "“Working with Younus was effortless from day one. He consistently turned ideas into thoughtful, polished designs, bringing clarity to every challenge and delivering results that exceeded our expectations.”",
       name: "Alex Morgan",
       role: "Product Designer",
       image: user2,
@@ -30,7 +31,7 @@ const Review = () => {
     {
       id: 3,
       quote:
-        "“Fast turnaround, exceptional communication, and a world-class eye for design. Highly recommended for anyone looking to elevate their digital presence.”",
+        "“Working with Younus was effortless from day one. He consistently turned ideas into thoughtful, polished designs, bringing clarity to every challenge and delivering results that exceeded our expectations.”",
       name: "Sophia Chen",
       role: "Founder & CEO",
       image: user3,
@@ -116,7 +117,7 @@ const Review = () => {
   return (
     <section className="w-full bg-white  pt-[150px] mb-[150px] px-4 font-sans relative overflow-hidden flex items-center justify-center">
 
-      <div className="max-w-[900px] w-full mx-auto text-center relative flex flex-col items-center">
+      <div className="max-w-[1200px] w-full mx-auto text-center relative flex flex-col items-center">
 
         {/* =====================================================
             QUOTE TOP ICON
@@ -199,7 +200,7 @@ const Review = () => {
                 ease: [0.22, 1, 0.36, 1],
               }}
 
-              className="text-xl md:text-[28px] lg:text-[28px] font-[300] text-[#1D1D1D] leading-relaxed tracking-tight max-w-3xl"
+              className="text-xl md:text-[28px] w-[880px]  lg:text-[28px] font-[350] text-[#1D1D1D] leading-[150%] max-w-3xl"
             >
               {activeReview.quote}
             </motion.p>
@@ -213,7 +214,7 @@ const Review = () => {
             USER INFO
         ===================================================== */}
 
-        <div className="relative min-h-[76px] mb-[40px] flex items-center justify-center">
+        <div className="relative min-h-[76px] mb-[24px] flex items-center justify-center">
 
           <AnimatePresence
             mode="wait"
@@ -254,7 +255,7 @@ const Review = () => {
                 {activeReview.name}
               </h4>
 
-              <p className="text-sm md:text-sm text-[#1d1d1d] font-[300]">
+              <p className="text-sm md:text-sm text-[#1d1d1d] font-[375]">
                 {activeReview.role}
               </p>
 
@@ -300,16 +301,16 @@ const Review = () => {
                         : 0,
                   }}
 
-                  animate={{
-                    opacity: isCenter ? 1 : 0.58,
-                    scale: isCenter ? 1 : 0.78,
-                    x:
-                      rev.position === "left"
-                        ? -72  // Left avatar-er gap barano holo
-                        : rev.position === "right"
-                        ? 72   // Right avatar-er gap barano holo
-                        : 0,
-                  }}
+                 animate={{
+  opacity: 1,
+  scale: 1,
+  x:
+    rev.position === "left"
+      ? -85
+      : rev.position === "right"
+      ? 85
+      : 0,
+}}
 
                   exit={{
                     opacity: 0,
@@ -343,8 +344,8 @@ const Review = () => {
                     cursor-pointer
                     ${
                       isCenter
-                        ? "w-[80px] h-[80px]  border-2 border-[#1D1D1D] shadow-[0_6px_25px_rgba(99,102,241,0.22)]"
-                        : "w-[56px] h-[56px] border border-[#1D1D1D]"
+                        ? "w-[80px] h-[80px]  border-1 border-[#1D1D1D]"
+                        : "w-[56px] h-[56px] border-1 border-[#1D1D1D]"
                     }
                   `}
                   aria-label={`Show review from ${rev.name}`}
@@ -370,86 +371,97 @@ const Review = () => {
             NAVIGATION BUTTONS
         ===================================================== */}
 
-        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between items-center px-0 md:-mx-12 pointer-events-none">
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between items-center px-0 pointer-events-none">
 
           {/* PREVIOUS */}
 
-          <motion.button
-            onClick={handlePrev}
+<motion.button
+  onClick={handleNext}
 
-            whileHover={{
-              scale: 1.08,
-              x: -3,
-            }}
+  whileHover={{
+    scale: 1.08,
+    x: 3,
+  }}
 
-            whileTap={{
-              scale: 0.92,
-            }}
+  whileTap={{
+    scale: 0.92,
+  }}
 
-            className="
-              pointer-events-auto
-              w-11
-              h-11
-              rounded-full
-              border
-              border-gray-300
-              bg-white
-              flex
-              items-center
-              justify-center
-              text-gray-700
-              hover:bg-black
-              hover:text-white
-              hover:border-black
-              transition-colors
-              duration-300
-              shadow-sm
-            "
+  className="
+    pointer-events-auto
+    w-[48px]
+    h-[48px]
+    rounded-[10px]
+    border
+    border-[#1d1d1d]
+    bg-white
+    flex
+    items-center
+    justify-center
+    text-[#1d1d1d]
+    hover:bg-[#FFE3FB]
+    transition-all
+    duration-200
+    ease-in-out
+    
+    cursor-pointer
+    outline-none
 
-            aria-label="Previous Review"
-          >
-            <FiArrowLeft className="text-lg" />
-          </motion.button>
+    shadow-[inset_0_-5px_0_#ddd]
+
+    active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+  "
+
+  aria-label="Next Review"
+>
+ <img className='rotate-180 mb-1' src={arrow} alt="" />
+</motion.button>
 
 
           {/* NEXT */}
 
-          <motion.button
-            onClick={handleNext}
+<motion.button
+  onClick={handleNext}
 
-            whileHover={{
-              scale: 1.08,
-              x: 3,
-            }}
+  whileHover={{
+    scale: 1.08,
+    x: 3,
+  }}
 
-            whileTap={{
-              scale: 0.92,
-            }}
+  whileTap={{
+    scale: 0.92,
+  }}
 
-            className="
-              pointer-events-auto
-              w-11
-              h-11
-              rounded-full
-              border
-              border-gray-300
-              bg-white
-              flex
-              items-center
-              justify-center
-              text-gray-700
-              hover:bg-black
-              hover:text-white
-              hover:border-black
-              transition-colors
-              duration-300
-              shadow-sm
-            "
+  className="
+    pointer-events-auto
+    w-[48px]
+    h-[48px]
+    rounded-[10px]
+    border
+    border-[#1d1d1d]
+    bg-white
+    flex
+    items-center
+    justify-center
+    text-[#1d1d1d]
+    hover:bg-[#FFE3FB]
+    transition-all
+    duration-200
+    ease-in-out
+    cursor-pointer
+    outline-none
 
-            aria-label="Next Review"
-          >
-            <FiArrowRight className="text-lg" />
-          </motion.button>
+    shadow-[inset_0_-5px_0_#ddd]
+
+    active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+  "
+
+  aria-label="Next Review"
+>
+ <img className='mb-1' src={arrow} alt="" />
+
+ 
+</motion.button>
 
         </div>
 

@@ -10,15 +10,15 @@ import process4 from "../assets/process4.svg";
 const Path = () => {
   const steps = [
     {
-      id: "(01)",
+      id: "01",
       title: "Problem Framing",
       description:
-        "I explore insights, and market context to clearly define the problem. Research findings are translated into ideas that shape direction, inform decisions, and establish a strong foundation for the project.",
+        "I start by getting to the heart of the problem. I explore users, business goals, existing experiences, and market context to understand what needs to be solved and why before making any design decisions.",
       bgColor: "bg-[#FBEBEA]",
        image: process1,
     },
     {
-      id: "(02)",
+      id: "02",
       title: "Shaping the Idea",
       description:
         "Here, I refine initial ideas into clear concepts by aligning strategy and creativity. I develop structural directions that balance innovation with feasibility, while supporting both brand goals and user expectations.",
@@ -26,7 +26,7 @@ const Path = () => {
        image: process2,
     },
     {
-      id: "(03)",
+      id: "03",
       title: "Prototyping & Testing",
       description:
         "In this phase, I bring concepts to life through prototyping and real-world testing. I validate functionality, usability, and clarity by iterating on feedback, refining details, and resolving issues before final delivery.",
@@ -45,13 +45,13 @@ const Path = () => {
 
   return (
     <section className="relative w-full bg-[#E3E3FF] px-4 py-25 sm:px-6 md:px-10 md:py-30 lg:px-12 lg:py-38">
-      <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+      <div className="mx-auto flex w-full max-w-[1200px]  justify-between">
         
         {/* =========================================
             LEFT SIDE
         ========================================= */}
         <div className="relative">
-          <div className="lg:sticky lg:top-28">
+          <div className="lg:sticky lg:top-28 w-[550px]">
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const Path = () => {
             >
             
 
-              <h2 className="max-w-[600px] text-4xl font-medium leading-[1.08] tracking-[-0.04em] text-[#1A1A1A] sm:text-5xl md:text-[48px] lg:text-[48px]">
+              <h2 className=" text-4xl font-medium leading-[120%] tracking-[-2px] text-[#1A1A1A] sm:text-5xl md:text-[48px] lg:text-[48px]">
                 High-quality work with real value considered.
               </h2>
             </motion.div>
@@ -77,7 +77,7 @@ const Path = () => {
                 delay: 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mt-7 max-w-[530px] text-base leading-[1.75] text-gray-600 md:text-lg"
+              className="mt-[18px]  text-base leading-[160%] text-[#1d1d1d] md:text-[16px]"
             >
               My working process revolves around an approach aimed at
               maximizing productivity and creativity with clarity and focus.
@@ -85,32 +85,37 @@ const Path = () => {
               relevant information and outline key objectives.
             </motion.p>
 
-        <a
-          className="
-            inline-flex
-            items-center
-            gap-3
-            px-6
-            py-3
-            rounded-[10px]
-            border
-            border-[#1D1D1D]
-            text-gray-900
-            text-sm
-            font-medium
-            hover:bg-black
-            hover:text-white
-            hover:border-black
-            transition-all
-            duration-300
-            shadow-sm
-            group/btn
-            hover:cursor-pointer
-            mt-8
-          "
-        >
-          <span>Explore more</span>
-        </a>
+<div className="inline-block border mt-[30px] rounded-[10px] border-[#1d1d1d]">
+    <button
+    onClick={() => alert('Downloading Resume...')}
+    className="
+      flex  items-center
+      px-6 h-[54px] 
+      justify-center
+      bg-white text-[#1d1d1d]
+      font-medium text-base 
+      rounded-[10px]
+      border-b-5 border-[#ddd]
+      w-[180px]
+      text-[14px]
+      
+tracking-[-0.3]
+      
+     
+      active:scale-95
+      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+      transition-all duration-200 ease-in-out
+      cursor-pointer
+      outline-none
+
+      hover:bg-[#FFE3FB]
+    "
+  >
+    <span>Explore More</span>
+    {/* dasdfsadfasfsa */}
+
+  </button>
+</div>
           </div>
         </div>
 
@@ -159,17 +164,17 @@ const Path = () => {
                   className={`
                     sticky
                     mb-6
-                    min-h-[420px]
-                    w-full
-                    rounded-[28px]
+                    
+                    w-[520px]
+                    rounded-[20px]
                     border
                     border-[#1D1D1D]
                     p-7
-                    shadow-[0_25px_70px_rgba(0,0,0,0.07)]
-                    sm:rounded-[32px]
+                    
+                    sm:rounded-[20px]
                     sm:p-9
-                    md:min-h-[460px]
-                    md:p-12
+                   
+                    md:p-[35px]
                     ${step.bgColor}
                   `}
                 >
@@ -186,7 +191,7 @@ const Path = () => {
                     className="flex h-full flex-col justify-between"
                   >
                     {/* TOP */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-start justify-between">
                       
                       {/* Icon */}
                       <motion.div
@@ -199,24 +204,43 @@ const Path = () => {
                           stiffness: 300,
                           damping: 15,
                         }}
-                        className="flex h-18 w-18 items-center justify-center rounded-full border border-[#1D1D1D] p-[13px] bg-white shadow-sm md:h-20 md:w-20"
+                        className="flex h-18 w-18 items-center justify-center rounded-full border border-[#1D1D1D] p-[13px] bg-white  md:h-18 md:w-18"
                       >
   
   <img
   src={step.image}
   alt={step.title}
-  className="h-full w-full rounded-full object-cover"
+  className="h-[42px]  w-[42px]  object-cover"
 />
                       </motion.div>
 
                       {/* Number */}
-                      <span className="text-sm font-normal tracking-[0.08em] text-gray-500 md:text-base">
-                        {step.id}
-                      </span>
+<span
+  className="
+    text-[10px]
+    md:text-[12px]
+    font-medium
+    
+   
+    text-[#1d1d1d]
+    flex
+    items-center
+    uppercase
+    h-[18px]
+    bg-[#1d1d1d1a]
+    flex
+    items-center
+    px-[8px]
+    rounded-[4px]
+    
+  "
+>
+  Step - {step.id}
+</span>
                     </div>
 
                     {/* CONTENT */}
-                    <div className="mt-10 md:mt-12">
+                    <div className="mt-10 md:mt-[30px]">
                       <motion.h3
                         initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -226,7 +250,7 @@ const Path = () => {
                           delay: 0.35 + index * 0.08,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="text-2xl font-medium tracking-[-0.03em] text-[#1A1A1A] sm:text-3xl"
+                        className="text-[22px] font-medium tracking-[-0.38] text-[#1A1A1A] sm:text-3xl"
                       >
                         {step.title}
                       </motion.h3>
@@ -240,25 +264,13 @@ const Path = () => {
                           delay: 0.42 + index * 0.08,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="mt-5 max-w-[600px] text-base leading-[1.75] text-gray-600 md:text-[17px]"
+                        className="mt-5  text-base font-[375] leading-[160%] text-[#1d1d1d] md:text-[16px]"
                       >
                         {step.description}
                       </motion.p>
                     </div>
 
-                    {/* BOTTOM PROGRESS DOTS */}
-                    <div className="mt-12 flex items-center gap-2">
-                      {steps.map((_, dotIndex) => (
-                        <div
-                          key={dotIndex}
-                          className={`h-1 rounded-full transition-all duration-500 ${
-                            dotIndex === index
-                              ? "w-10 bg-gray-800"
-                              : "w-2 bg-gray-400/40"
-                          }`}
-                        />
-                      ))}
-                    </div>
+
                   </motion.div>
                 </motion.div>
               );

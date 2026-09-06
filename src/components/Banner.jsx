@@ -10,11 +10,12 @@ import uiuxSvg from '../assets/uiux.svg';
 import penToolSvg from '../assets/pentool.svg';
 import drinkSvg from '../assets/drink.svg';
 import nocodeSvg from '../assets/nocode.svg';
+import arrow from '../assets/bannerarrow.svg';
 
 // Profile pictures for animation
-import profile1 from '../assets/profile1.png';
-import profile2 from '../assets/profile2.png';
-import profile3 from '../assets/profile3.png';
+import profile1 from '../assets/photo.png';
+import profile2 from '../assets/photo.png';
+import profile3 from '../assets/photo.png';
 
 // card image
 import card1 from '../assets/card1.svg';
@@ -55,8 +56,13 @@ const cards = [
   {
     id: 2,
     title: 'About Me',
-    description:
-      'Discover my background, skills, experience, and journey as a designer.',
+    description: (
+    <>
+      Discover my background,
+      <br />
+      skills, experience, and journey as a designer.
+    </>
+  ),
     icon: card2,
     btnBg: 'bg-yellow-100',
     link: '/about',
@@ -65,8 +71,13 @@ const cards = [
   {
     id: 3,
     title: 'Contact Me',
-    description:
-      "Let’s work together to turn your ideas into meaningful digital experiences.",
+description: (
+    <>
+   Let’s work together to turn 
+   <br />
+your ideas into meaningful digital experiences.
+    </>
+  ),
     icon: card3,
     btnBg: 'bg-[#E3F2FF]',
     link: '/contact',
@@ -96,7 +107,7 @@ const cards = [
           md:pb-56
 
           lg:pt-40
-          lg:pb-72
+          lg:pb-[318px]
         "
       >
 
@@ -126,7 +137,8 @@ const cards = [
               top-10
               hidden
               lg:block
-              w-[158px]
+              w-[188px]
+              h-[83px]
             "
             initial={{
               opacity: 0,
@@ -171,8 +183,8 @@ const cards = [
               bottom-3
               hidden
               lg:block
-              w-[76px]
-              h-[76-px]
+              w-[77px]
+              h-[77px]
             "
             initial={{
               opacity: 0,
@@ -267,7 +279,8 @@ const cards = [
               bottom-5
               hidden
               lg:block
-              w-[158px]
+              w-[186px]
+              h-[93px]
              
             "
             initial={{
@@ -308,7 +321,7 @@ const cards = [
 
           {/* ======================================================
               MOBILE PROFILE IMAGE
-              Screenshot-er moto title-er UPOR
+              
           ====================================================== */}
 
           <motion.div
@@ -433,7 +446,8 @@ const cards = [
             ====================================================== */}
 
             <span className="hidden md:inline">
-              Hello
+             <div className=''>
+               Hello
               <span className="">!</span>
 
               {/* Desktop inline profile */}
@@ -498,8 +512,11 @@ const cards = [
               </span>
 
               I'm Younus,
-              <br className="hidden md:block" />
-              a UI & UX Designer.
+             </div>
+             
+             <div>
+               a UI & UX Designer.
+             </div>
             </span>
 
             {/* ======================================================
@@ -540,12 +557,12 @@ const cards = [
               z-10
               mx-auto
 
-              mt-[40px]
+              mt-[50px]
 
               text-[#1d1d1d]
 
               text-[18px]
-             
+             font-[375]
 
               max-w-[360px]
 
@@ -553,40 +570,46 @@ const cards = [
               sm:max-w-[430px]
 
               md:text-lg
-              md:max-w-3xl
+              md:max-w-[880px]
               md:leading-[150%]
               lg:text-xl
+              
             "
           >
 I create intuitive, user-centered digital experiences that balance beautiful design with seamless functionality. With expertise in HTML, CSS, and WordPress, I also bring designs to life as responsive and engaging websites.
           </motion.p>
 
-<div className="flex items-center justify-center mt-[55px]">
-  <button
+<div className="flex items-center justify-center mt-[50px]">
+<div className="border rounded-[10px] border-[#1d1d1d]">
+    <button
     onClick={() => alert('Downloading Resume...')}
     className="
-      flex items-center gap-3 
-      px-6 py-4 
-      bg-white text-slate-800 
+      flex items-center gap-5 
+      px-6 h-[52px] 
+      bg-white text-[#1d1d1d]
       font-medium text-base 
-      rounded-[8px]
-      border-1 border-[#1D1D1D]
+      rounded-[10px]
+      border-b-5 border-[#ddd]
       
-      shadow-[inset_0_-3px_6px_rgba(29,29,29,0.15)]
-
-      hover:shadow-[inset_0_-3px_6px_rgba(29,29,29,0.15),0_6px_16px_rgba(0,0,0,0.08)]
-      hover:bg-slate-50/50
+      text-[14px]
+      
+tracking-[-0.3]
+      
+      
       active:scale-95
       active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
       transition-all duration-200 ease-in-out
       cursor-pointer
       outline-none
+
+      hover:bg-[#FFE3FB]
     "
   >
     <span>Download My Resume</span>
     {/* dasdfsadfasfsa */}
 <img src={download} alt="" ></img>
   </button>
+</div>
 </div>
         </div>
       </div>
@@ -612,10 +635,10 @@ I create intuitive, user-centered digital experiences that balance beautiful des
             max-w-[1200px]
             mx-auto
 
-            -mt-32
-            sm:-mt-36
+            -mt-[158px]
+            
 
-            md:-mt-40
+            md:
 
             pb-[5px]
 
@@ -629,93 +652,7 @@ I create intuitive, user-centered digital experiences that balance beautiful des
               NO spread / tilt animation
           ====================================================== */}
 
-          <div
-            className="
-              md:hidden
-              flex
-              flex-col
-              gap-6
-              max-w-[430px]
-              
-              mx-auto
-            "
-          >
-            {cards.map((card) => (
-              <motion.div
-                key={card.id}
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.15,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="
-                  w-full
-                  bg-white
-                  rounded-3xl
-                  p-8
-                  shadow-[0_15px_40px_rgb(0,0,0,0.08)]
-                  border
-                  border-[#000000]
-                  
-                  flex
-                  flex-col
-                  items-center
 
-                  text-center
-                "
-              >
-
-                {/* Icon */}
-                <div className="mb-6 flex justify-center items-center">
-                 <img
-    src={card.icon}
-    alt={card.title}
-    className="w-20 h-20 object-contain"
-  />
-                </div>
-
-                {/* Text */}
-                <h3 className="text-xl font-semibold text-[#1D1D1D] mb-3">
-                  {card.title}
-                </h3>
-
-                <p className="text-[#1D1D1D] text-sm leading-relaxed mb-8">
-                  {card.description}
-                </p>
-
-                {/* Button */}
-                <Link
-                  to={card.link}
-                  className={`
-                    w-12
-                    h-12
-                    rounded-full
-                    flex
-                    items-center
-                    justify-center
-                    transition-all
-                    hover:scale-110
-                    shadow-sm
-                    ${card.btnBg}
-                  `}
-                >
-                  <FiArrowRight className="text-gray-700 text-lg" />
-                </Link>
-
-              </motion.div>
-            ))}
-          </div>
 
           {/* ======================================================
               DESKTOP
@@ -729,6 +666,7 @@ I create intuitive, user-centered digital experiences that balance beautiful des
               relative
               h-[380px]
               max-w-5xl
+              
               mx-auto
             "
           >
@@ -736,9 +674,9 @@ I create intuitive, user-centered digital experiences that balance beautiful des
 
               // Desktop positions
               const desktopXValues = [
-                '-105%',
+                '-411px',
                 '0%',
-                '105%',
+                '411px',
               ];
 
               const desktopRotations = [
@@ -803,13 +741,13 @@ I create intuitive, user-centered digital experiences that balance beautiful des
                     left-0
                     right-0
                     mx-auto
+h-full
 
                     bg-white
                     rounded-[20px]
 
-                    p-10
-                    md:p-10
-
+                  pt-[40px] pb-[50px] px-[40px]
+                  
                    
 
                     border
@@ -832,11 +770,11 @@ I create intuitive, user-centered digital experiences that balance beautiful des
                   </div>
 
                   {/* Card Text */}
-                  <h3 className="text-xl leading-[28px] font-medium text-[#1d1d1d] mb-6">
+                  <h3 className="text-xl leading-[28px] font-medium text-[#1d1d1d] mb-[12px]">
                     {card.title}
                   </h3>
 
-                  <p className="text-[#1d1d1d] text-sm md:text-[17px] leading-[150%] mb-[30px] flex-grow">
+                  <p className="text-[#1d1d1d] text-sm md:text-[17px] leading-[150%] mb-[24px] flex-grow font-[375]">
                     {card.description}
                   </p>
 
@@ -844,8 +782,8 @@ I create intuitive, user-centered digital experiences that balance beautiful des
 <Link
   to={card.link}
   className={`
-    w-14
-    h-11
+    w-[52px]
+    h-[40px]
     rounded-[50px]
     flex
     items-center
@@ -863,7 +801,7 @@ I create intuitive, user-centered digital experiences that balance beautiful des
     ${card.btnBg}
   `}
 >
-  <FiArrowRight className="w-5 h-5 text-slate-800 transition-transform duration-200 group-hover:translate-x-0.5" />
+<img src={arrow} alt="" />
 </Link>
 
                 </motion.div>

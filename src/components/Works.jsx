@@ -3,14 +3,16 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 
 // Project images (Tomar assets folder er path onujayi thik kore nio)
-import work1 from '../assets/work1.png';
-import work2 from '../assets/work2.png';
-import work3 from '../assets/work3.png';
-import work4 from '../assets/work1.png';
-import work5 from '../assets/work2.png';
-import work6 from '../assets/work3.png';
-import work7 from '../assets/work1.png';
-import work8 from '../assets/work2.png';
+import work1 from '../assets/projectcard.png';
+import work2 from '../assets/projectcard.png';
+import work3 from '../assets/projectcard.png';
+import work4 from '../assets/projectcard.png';
+import work5 from '../assets/projectcard.png';
+import work6 from '../assets/projectcard.png';
+import work7 from '../assets/projectcard.png';
+import work8 from '../assets/projectcard.png';
+
+import arrow from '../assets/bannerarrow.svg'
 
 const worksData = [
   {
@@ -74,7 +76,7 @@ const worksData = [
 const Works = () => {
 
   return (
-    <section className="w-full bg-white mt-[155px] px-4 font-sans relative overflow-hidden">
+    <section className="w-full bg-white mt-[160px] px-4 font-sans relative overflow-hidden">
 
       {/* =========================================================
           SECTION HEADER
@@ -90,7 +92,7 @@ const Works = () => {
             duration: 0.6,
             ease: "easeOut"
           }}
-          className="text-4xl md:text-5xl lg:text-[48px] font-medium w-[850px] mx-auto text-[#1D1D1D] tracking-[-2] mb-4"
+          className="text-4xl md:text-5xl lg:text-[48px] font-medium w-[850px] mx-auto text-[#1D1D1D] tracking-[-2] mb-[18px]"
         >
           My selected works
         </motion.h2>
@@ -104,7 +106,7 @@ const Works = () => {
             delay: 0.2,
             ease: "easeOut"
           }}
-          className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[850px] mx-auto leading-relaxed font-light"
+          className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[850px] mx-auto font-[375] leading-[150%]"
         >
           A collection of ideas turned into thoughtful experiences, purposeful interfaces, and products people enjoy using.
         </motion.p>
@@ -116,7 +118,7 @@ const Works = () => {
           8 CARDS GRID
       ========================================================= */}
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-[50px]">
 
         {worksData.map((work, index) => (
 
@@ -135,38 +137,43 @@ const Works = () => {
           SEE ALL WORKS
       ========================================================= */}
 
-      <div className="block text-center mt-23">
+      <div className="block text-center mt-[90px]">
 
-        <h2 className="text-[#1d1d1d] font-[300] mb-[30px] text-2xl">
+        <h2 className="text-[#1d1d1d] font-[375] mb-[20px] text-2xl">
           Are you ready to see more?
         </h2>
 
-        <a
-          className="
-            inline-flex
-            items-center
-            gap-3
-            px-6
-            py-4
-            rounded-[10px]
-            border
-            border-[#1D1D1D]
-            text-[#1d1d1d]
-            font-medium
-            hover:bg-black
-            hover:text-white
-            hover:border-black
-            transition-all
-    shadow-[inset_0_-3px_6px_rgba(29,29,29,0.15)]
+<div className="inline-block border  rounded-[10px] border-[#1d1d1d]">
+    <button
+    onClick={() => alert('Downloading Resume...')}
+    className="
+      flex  items-center
+      px-6 h-[54px] 
+      justify-center
+      bg-white text-[#1d1d1d]
+      font-medium text-base 
+      rounded-[10px]
+      border-b-5 border-[#ddd]
+      w-[180px]
+      text-[14px]
+      
+tracking-[-0.3]
+      
+     
+      active:scale-95
+      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+      transition-all duration-200 ease-in-out
+      cursor-pointer
+      outline-none
 
-            duration-300
-           
-            group/btn
-            hover:cursor-pointer
-          "
-        >
-          <span>See all works</span>
-        </a>
+      hover:bg-[#FFE3FB]
+    "
+  >
+    <span>See All Works</span>
+    {/* dasdfsadfasfsa */}
+
+  </button>
+</div>
 
       </div>
 
@@ -324,14 +331,18 @@ const AnimatedProjectCard = ({ work, index }) => {
         border
         border-[#1d1d1d]
         p-5
-        md:p-5
+        md:pb-10
+        md:pt-5
+        md:pr-5
+        md:pl-5
    
         flex
         flex-col
         justify-between
         transition-shadow
         duration-500
-        hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)]
+        gap-
+        
         group
         will-change-transform
       "
@@ -395,17 +406,20 @@ const AnimatedProjectCard = ({ work, index }) => {
         <span
           className="
             text-[10px]
-            md:text-[12.3px]
-            font-[400]
+            md:text-[12px]
+            font-[475]
             mt-10
             tracking-[18.3]
             text-[#1d1d1d]
-            uppercase
+            flex
+            items-center
+            uppercase[[
+            h-[25px]
             bg-[#FFE3FB]
             px-[10px]
-            py-[8px]
+           
             rounded-[6px]
-            mb-[21px]
+            mb-[16px]
           "
         >
           {work.category}
@@ -420,8 +434,8 @@ const AnimatedProjectCard = ({ work, index }) => {
             md:text-[24px]
             font-medium
             text-[#1D1D1D]
-            tracking-tight
-            mb-7
+            tracking-[-1]
+            mb-[18px]
             leading-[39px]
           "
         >
@@ -431,47 +445,36 @@ const AnimatedProjectCard = ({ work, index }) => {
 
         {/* LIVE SITE BUTTON */}
 
-<a
-  href={work.link}
-
-  className="
-    inline-flex
-    items-center
-    gap-[21px]
-    mb-5
-    px-6
-    py-3
-    rounded-[10px]
-    border
-    border-[#1D1D1D]
-    text-[#1d1d1d]
-    text-sm
-    font-medium
-    shadow-[inset_0_-3px_6px_rgba(29,29,29,0.15)]
-    hover:bg-black
-    hover:text-white
-    hover:border-black
-    transition-all
-    duration-300
-  
-    group/btn
-  "
->
-
-  <span>
-    Live Site
-  </span>
-
-  <FiArrowRight
+<div className="border rounded-[10px] border-[#1d1d1d]">
+    <button
+    onClick={() => alert('Downloading Resume...')}
     className="
-      text-base
-      transition-transform
-      duration-300
-      group-hover/btn:translate-x-1
-    "
-  />
+      flex items-center gap-5 
+      px-6 h-[48px] 
+      bg-white text-[#1d1d1d]
+      font-medium text-base 
+      rounded-[10px]
+      border-b-5 border-[#ddd]
+      
+      text-[14px]
+      
+tracking-[-0.3]
+      
+      
+      active:scale-95
+      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+      transition-all duration-200 ease-in-out
+      cursor-pointer
+      outline-none
 
-</a>
+      hover:bg-[#FFE3FB]
+    "
+  >
+    <span>Live site</span>
+    {/* dasdfsadfasfsa */}
+<img src={arrow} alt="" ></img>
+  </button>
+</div>
 
       </div>
 

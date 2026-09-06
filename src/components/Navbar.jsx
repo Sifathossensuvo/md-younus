@@ -7,28 +7,34 @@ import {
 } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from '../assets/logo.svg'
+import linkedin from '../assets/navicon/linkedin.svg'
+import facebook from '../assets/navicon/facebook.svg'
+import dribbble from '../assets/navicon/dribbble.svg'
+import linkedinhover from '../assets/navicon/linkedinhover.svg'
+import facebookhover from '../assets/navicon/facebookhover.svg'
+import dribbblehover from '../assets/navicon/dribbblehover.svg'
 
 const menuItems = ["Home", "About", "Projects", "Contact"];
 
 const MenuItem = ({ item, href, mobile = false, onClick }) => {
   return (
-    <a
-      href={href}
-      onClick={onClick}
-      className={`group relative block overflow-hidden text-[#1D1D1D] ${
-        mobile
-          ? "h-[28px] text-[18px] font-[525]"
-          : "h-[28px] text-[18px] font-[525]"
-      }`}
-    >
-      <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
-        {item}
-      </span>
+<a
+  href={href}
+  onClick={onClick}
+  className={`group relative block overflow-hidden text-[#1D1D1D] ${
+    mobile
+      ? "text-[18px] font-[525]"
+      : "h-[13px] leading-[22.5px] tracking-[-0.36px] text-[18px] flex items-center font-[525]"
+  }`}
+>
+  <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
+    {item}
+  </span>
 
-      <span className="absolute left-0 top-full block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
-        {item}
-      </span>
-    </a>
+  <span className="absolute left-0 top-[calc(100%+1px)] block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
+    {item}
+  </span>
+</a>
   );
 };
 
@@ -40,14 +46,14 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="w-full px-4 pt-5 sm:px-5 sm:pt-5">
+      <nav className="w-full px-[30px] pt-5 h-[76px]">
         <div className="relative z-50 mx-auto flex max-w-[1200px] items-center justify-between rounded-[20px] border-1 border-[#1D1D1D] bg-white px-[30px] py-[15px] sm:px-5">
 
           {/* Logo */}
         <img src={logo} href="#home"
             onClick={closeMenu}
-            className="text-[24px] font-medium tracking-tight  sm:text-[27px]"/>
-
+            className="w-[103px] h-[23px] font-medium tracking-tight "/>
+ 
           {/* Desktop Menu */}
           <div className="hidden items-center gap-20 md:flex text-[#1D1D1D]">
             <MenuItem item="Home" href="#home"/>
@@ -58,29 +64,74 @@ const Navbar = () => {
 
           {/* Desktop Social Icons */}
           <div className="hidden items-center gap-2 md:flex">
-            <a
-              href="#"
-              aria-label="X"
-              className="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-500 text-black transition-all duration-300 hover:bg-black hover:text-white"
-            >
-              <FaXTwitter className="text-[14px]" />
-            </a>
+<div className="border rounded-[10px] border-[#1d1d1d]">
+  <a
+  href="#"
+  aria-label="X"
+  className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
+>
+ 
+   {/* icon first */}
+  <img
+    className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+    src={facebook}
+    alt=""
+  />
+  {/* icon second */}
+  <img
+    className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+    src={facebookhover}
+    alt=""
+  />
+ 
+</a>
+</div>
 
-            <a
-              href="#"
-              aria-label="Dribbble"
-              className="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-500 text-black transition-all duration-300 hover:bg-black hover:text-white"
-            >
-              <FaDribbble className="text-[14px]" />
-            </a>
+<div className="border rounded-[10px] border-[#1d1d1d]">
+  <a
+  href="#"
+  aria-label="X"
+  className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
+>
+ 
+   {/* icon first */}
+  <img
+    className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+    src={dribbble}
+    alt=""
+  />
+  {/* icon second */}
+  <img
+    className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+    src={dribbblehover}
+    alt=""
+  />
+ 
+</a>
+</div>
 
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-500 text-black transition-all duration-300 hover:bg-black hover:text-white"
-            >
-              <FaInstagram className="text-[14px]" />
-            </a>
+<div className="border rounded-[10px] border-[#1d1d1d]">
+  <a
+  href="#"
+  aria-label="X"
+  className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
+>
+ 
+   {/* icon first */}
+  <img
+    className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+    src={linkedin}
+    alt=""
+  />
+  {/* icon second */}
+  <img
+    className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+    src={linkedinhover}
+    alt=""
+  />
+ 
+</a>
+</div>
           </div>
 
           {/* Mobile Hamburger */}

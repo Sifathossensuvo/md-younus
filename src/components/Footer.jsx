@@ -26,7 +26,7 @@ const Footer = () => {
       duration: 12,
       ease: "linear",
     }}
-    className="w-full  h-full relative flex items-center justify-center bg-[#E3F2FF] rounded-full  border border-gray-100"
+    className="w-full  h-full relative flex items-center justify-center bg-[#FFE7A9] rounded-full  border border-[#1d1d1d]"
   >
 
     {/* SVG Text Image */}
@@ -104,25 +104,37 @@ const Footer = () => {
         </motion.p>
 
 {/* ......button.... */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.75, rotate: -4 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ 
-              duration: 0.8,
-              delay: 0.35,
-              type: "spring",
-              stiffness: 130,
-              damping: 14
-            }}
-          >
-            <Link 
-              to="/contact" 
-              className="inline-block bg-white text-gray-900 font-medium px-8 py-4 rounded-xl text-base shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105"
-            >
-              Get in Touch
-            </Link>
-          </motion.div>
+<div className="inline-block border mt-[30px] rounded-[10px] border-[#1d1d1d]">
+    <button
+    onClick={() => alert('Downloading Resume...')}
+    className="
+      flex  items-center
+      px-6 h-[54px] 
+      justify-center
+      bg-white text-[#1d1d1d]
+      font-medium text-base 
+      rounded-[10px]
+      border-b-5 border-[#ddd]
+      w-[180px]
+      text-[14px]
+      
+tracking-[-0.3]
+      
+     
+      active:scale-95
+      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+      transition-all duration-200 ease-in-out
+      cursor-pointer
+      outline-none
+
+      hover:bg-[#FFE3FB]
+    "
+  >
+    <span>Get in Touch</span>
+  
+
+  </button>
+</div>
 </div>
 
 {/* arrow */}

@@ -42,28 +42,36 @@ const Table = () => {
   ];
 
   return (
-    <section className="w-full pt-40 pb-40 px-4 md:px-12 font-sans relative overflow-hidden">
+    <section className="w-full pt-40 pb-[200px] px-4 md:px-12 font-sans relative overflow-hidden">
       
       {/* Section Header */}
-      <div className="max-w-[800px] mx-auto text-center mb-[70px]">
-        <motion.h2 
+      <div className=" mx-auto text-center mb-[70px]">
+
+   <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-4xl md:text-5xl tracking-[-2px] lg:text-[52px] font-medium text-[#1A1A1A]  mb-[35px]"
+          transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }}
+          className="text-4xl md:text-5xl lg:text-[48px] font-medium w-[850px] mx-auto text-[#1D1D1D] tracking-[-2] mb-[18px]"
         >
           What’s on the Table
         </motion.h2>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-[#1D1D1D] font-[375] text-base md:text-[22px] max-w-[912px] mx-auto leading-relaxed"
+          transition={{
+            duration: 0.6,
+            delay: 0.2,
+            ease: "easeOut"
+          }}
+          className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[912px] mx-auto font-[375] leading-[150%]"
         >
-          Strategy, creativity, and thoughtful design come together to create digital experiences that solve real problems and deliver lasting value.
+         Strategy, creativity, and thoughtful design come together to create digital experiences that solve real problems and deliver lasting value.
         </motion.p>
       </div>
 

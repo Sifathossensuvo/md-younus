@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const Experience = () => {
@@ -7,38 +7,38 @@ const Experience = () => {
     {
       id: 1,
       value: "98%",
-      label: "Satisfied happy customers",
-      strokeColor: "#E88CA3",
-      fillColor: "#FDF4F5"
+      label: <>Satisfied happy <br /> customers</>,
+      strokeColor: "#1d1d1d",
+      fillColor: "#FBEBEA"
     },
     {
       id: 2,
       value: "8+",
-      label: "Years of work experience",
-      strokeColor: "#333333",
-      fillColor: "#F5F5F5"
+      label: <>Years of work <br />experience</>,
+      strokeColor: "#1d1d1d",
+      fillColor: "#E3E3FF"
     },
     {
       id: 3,
-      value: "80+",
-      label: "Successful projects done",
-      strokeColor: "#6A9BD8",
-      fillColor: "#F0F5FC"
+      value: "800+",
+      label: <>Successful <br /> projects done</>,
+      strokeColor: "#1d1d1d",
+      fillColor: "#E3F2FF"
     },
     {
       id: 4,
-      value: "10+",
-      label: "Design awards received",
-      strokeColor: "#5CB895",
-      fillColor: "#F0F8F4"
+      value: "04+",
+      label: <>Design awards <br /> received</>,
+      strokeColor: "#1d1d1d",
+      fillColor: "#DBF5F0"
     },
     {
       id: 5,
-      value: "45",
-      label: "Travelled around the country",
-      strokeColor: "#E88CA3",
-      fillColor: "#FDF4F5"
-    }
+      value: "06",
+      label: <>Travelled around <br /> the country</>,
+      strokeColor: "#1d1d1d",
+      fillColor: "#FFE3FB"
+    },
   ];
 
   const containerVariants = {
@@ -70,7 +70,7 @@ const Experience = () => {
   };
 
   return (
-    <section className="w-full bg-[#E3E3FF] pt-1 pb-12 border-b border-[#1D1D1D] px-4 md:px-12 font-sans relative overflow-hidden">
+    <section className="w-full bg-[#E3E3FF] pt-1 pb-[160px] border-b border-[#1D1D1D] px-4 md:px-12 font-sans relative overflow-hidden">
 
       {/* Background Glow 01 */}
       <motion.div
@@ -127,61 +127,34 @@ const Experience = () => {
       />
 
       {/* Section Header */}
-      <div className="max-w-[900px] mx-auto text-center mb-16 relative z-10">
+      <div className="max-w-[1200px] mx-auto text-center mb-[70px] relative z-10">
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+
+   <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.7,
-            ease: [0.22, 1, 0.36, 1]
+            duration: 0.6,
+            ease: "easeOut"
           }}
-          className="inline-flex items-center gap-2 mb-5"
+          className="text-4xl md:text-5xl lg:text-[48px] font-medium w-[850px] mx-auto text-[#1D1D1D] tracking-[-2] mb-[18px]"
         >
-          <motion.span
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.5, 1, 0.5]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="w-2 h-2 rounded-full bg-[#E88CA3]"
-          />
-
-          <span className="text-xs uppercase tracking-[0.25em] text-gray-500 font-semibold">
-            Experience & Impact
-          </span>
-        </motion.div>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 35, filter: "blur(10px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.9,
-            ease: [0.22, 1, 0.36, 1]
-          }}
-          className="text-4xl md:text-5xl lg:text-[52px] font-medium text-[#1A1A1A] tracking-tight mb-4"
-        >
-          My numbers say it all
+          The numbers tell the story
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 25, filter: "blur(6px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.8,
-            delay: 0.18,
-            ease: [0.22, 1, 0.36, 1]
+            duration: 0.6,
+            delay: 0.2,
+            ease: "easeOut"
           }}
-          className="text-gray-600 text-base md:text-lg max-w-xl mx-auto leading-relaxed"
+          className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[940px] mx-auto font-[375] leading-[150%]"
         >
-          These numbers reflect the experience and consistency, and measurable impact behind the work I've delivered over the years.
+         Years of experience, countless design decisions, and measurable results these numbers reflect the consistency, impact, and value I bring to every project.
         </motion.p>
       </div>
 
@@ -198,179 +171,122 @@ const Experience = () => {
       >
 
         {/* Top Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+<div className="flex flex-wrap justify-center gap-6 w-full">
 
-          {stats.slice(0, 3).map((item) => (
-            <motion.div
-              key={item.id}
-              variants={cardVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.035,
-                transition: {
-                  duration: 0.35,
-                  ease: "easeOut"
-                }
-              }}
-              whileTap={{
-                scale: 0.98
-              }}
-              className="group relative overflow-hidden bg-white rounded-full border border-gray-300/80 px-8 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex items-center justify-start gap-6 transition-shadow duration-500 hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)]"
-            >
+  {stats.slice(0, 3).map((item) => (
+    <motion.div
+      key={item.id}
+      variants={cardVariants}
+      
+     
+      className="group relative overflow-hidden bg-white rounded-full border border-[#1d1d1d] h-[92px] w-fit px-[30px] flex items-center justify-start gap-[16px]"
+    >
 
-              {/* Moving Shine */}
-              <motion.div
-                initial={{
-                  x: "-150%",
-                  opacity: 0
-                }}
-                whileHover={{
-                  x: "150%",
-                  opacity: 1
-                }}
-                transition={{
-                  duration: 0.8,
-                  ease: "easeInOut"
-                }}
-                className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/70 to-transparent skew-x-[-20deg] pointer-events-none"
-              />
+      {/* Moving Shine */}
+      <motion.div
 
-              {/* Soft Hover Glow */}
-              <div
-                className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none"
-                style={{
-                  backgroundColor: item.strokeColor
-                }}
-              />
+       
+        className="absolute inset-0   to-transparent skew-x-[-20deg] pointer-events-none"
+      />
 
-              {/* Number */}
-              <motion.span
-                whileHover={{
-                  scale: 1.12,
-                  x: 3
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeOut"
-                }}
-                className="relative z-10 text-3xl md:text-[40px] font-bold tracking-tight"
-                style={{
-                  color: item.fillColor,
-                  WebkitTextStroke: `1.5px ${item.strokeColor}`,
-                  paintOrder: 'stroke fill'
-                }}
-              >
-                {item.value}
-              </motion.span>
+      {/* Soft Hover Glow */}
+      <div
+        className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 s pointer-events-none"
+        style={{
+          backgroundColor: item.strokeColor
+        }}
+      />
 
-              {/* Label */}
-              <span className="relative z-10 text-normal md:text-[16px] font-medium text-gray-700 text-left leading-snug">
-                {item.label}
-              </span>
+      {/* Number */}
+      <motion.span
+        whileHover={{
+          scale: 1.12,
+          x: 3
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeOut"
+        }}
+        className="relative z-10 text-3xl md:text-[54px] font-semibold tracking-tight"
+        style={{
+          color: item.fillColor,
+          WebkitTextStroke: `2px ${item.strokeColor}`,
+          paintOrder: 'stroke fill'
+        }}
+      >
+        {item.value}
+      </motion.span>
 
-            </motion.div>
-          ))}
+      {/* Label */}
+      <span className="relative z-10 text-normal md:text-[16px] font-[375] text-[#1d1d1d] text-left leading-[150%]">
+        {item.label}
+      </span>
 
-        </div>
+    </motion.div>
+  ))}
+
+</div>
 
         {/* Bottom Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[700px]">
+        <div className="flex justify-center flex-wrap gap-6 w-full">
 
           {stats.slice(3, 5).map((item) => (
-            <motion.div
-              key={item.id}
-              variants={cardVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.035,
-                transition: {
-                  duration: 0.35,
-                  ease: "easeOut"
-                }
-              }}
-              whileTap={{
-                scale: 0.98
-              }}
-              className="group relative overflow-hidden bg-white rounded-full border border-gray-300/80 px-8 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex items-center justify-start gap-6 transition-shadow duration-500 hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)]"
-            >
+    <motion.div
+      key={item.id}
+      variants={cardVariants}
+      
+     
+      className="group relative overflow-hidden bg-white rounded-full border border-[#1d1d1d] h-[92px] w-fit px-[30px] flex items-center justify-start gap-[16px]"
+    >
 
-              {/* Moving Shine */}
-              <motion.div
-                initial={{
-                  x: "-150%",
-                  opacity: 0
-                }}
-                whileHover={{
-                  x: "150%",
-                  opacity: 1
-                }}
-                transition={{
-                  duration: 0.8,
-                  ease: "easeInOut"
-                }}
-                className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/70 to-transparent skew-x-[-20deg] pointer-events-none"
-              />
+      {/* Moving Shine */}
+      <motion.div
 
-              {/* Soft Hover Glow */}
-              <div
-                className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none"
-                style={{
-                  backgroundColor: item.strokeColor
-                }}
-              />
+       
+        className="absolute inset-0   to-transparent skew-x-[-20deg] pointer-events-none"
+      />
 
-              {/* Number */}
-              <motion.span
-                whileHover={{
-                  scale: 1.12,
-                  x: 3
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeOut"
-                }}
-                className="relative z-10 text-3xl md:text-[40px] font-bold tracking-tight"
-                style={{
-                  color: item.fillColor,
-                  WebkitTextStroke: `1.5px ${item.strokeColor}`,
-                  paintOrder: 'stroke fill'
-                }}
-              >
-                {item.value}
-              </motion.span>
+      {/* Soft Hover Glow */}
+      <div
+        className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 s pointer-events-none"
+        style={{
+          backgroundColor: item.strokeColor
+        }}
+      />
 
-              {/* Label */}
-              <span className="relative z-10 text-normal md:text-[16pxpx] font-medium text-gray-700 text-left leading-snug">
-                {item.label}
-              </span>
+      {/* Number */}
+      <motion.span
+        whileHover={{
+          scale: 1.12,
+          x: 3
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeOut"
+        }}
+        className="relative z-10 text-3xl md:text-[54px] font-semibold tracking-tight"
+        style={{
+          color: item.fillColor,
+          WebkitTextStroke: `2px ${item.strokeColor}`,
+          paintOrder: 'stroke fill'
+        }}
+      >
+        {item.value}
+      </motion.span>
 
-            </motion.div>
+      {/* Label */}
+      <span className="relative z-10 text-normal md:text-[16px] font-[375] text-[#1d1d1d] text-left leading-[150%]">
+        {item.label}
+      </span>
+
+    </motion.div>
           ))}
 
         </div>
 
       </motion.div>
 
-      {/* Bottom Decorative Line */}
-      <motion.div
-        initial={{
-          width: 0,
-          opacity: 0
-        }}
-        whileInView={{
-          width: "120px",
-          opacity: 1
-        }}
-        viewport={{
-          once: true
-        }}
-        transition={{
-          duration: 1,
-          delay: 0.8,
-          ease: [0.22, 1, 0.36, 1]
-        }}
-        className="h-[1px] bg-gray-400/40 mx-auto mt-20 relative z-10"
-      />
+
 
     </section>
   );
