@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
-import arrow from '../assets/bannerarrow.svg'
+import arrow from '../assets/bannerarrow.svg';
 
 // Assets folder theke quote icon ar user image gulo import kore nio
 import quoteIcon from '../assets/quote-icon.svg';
@@ -115,7 +115,7 @@ const Review = () => {
   ];
 
   return (
-    <section className="w-full bg-white  pt-[150px] mb-[150px] px-4 font-sans relative overflow-hidden flex items-center justify-center">
+    <section className="w-full bg-white pt-[150px] mb-[150px] px-4 font-sans relative overflow-hidden flex items-center justify-center max-sm:pt-[90px] max-sm:mb-[80px]">
 
       <div className="max-w-[1200px] w-full mx-auto text-center relative flex flex-col items-center">
 
@@ -141,12 +141,12 @@ const Review = () => {
             duration: 0.7,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mb-8"
+          className="mb-8 max-sm:mb-6"
         >
           <motion.img
             src={quoteIcon}
             alt="Quote"
-            className="w-[34px] h-[25px] mx-auto opacity-80"
+            className="w-[34px] h-[25px] mx-auto opacity-80 max-sm:w-[30px] max-sm:h-[22px]"
             animate={{
               y: [0, -4, 0],
             }}
@@ -163,7 +163,7 @@ const Review = () => {
             MAIN REVIEW TEXT
         ===================================================== */}
 
-        <div className="relative min-h-[140px] md:min-h-[120px] flex items-center justify-center mb-[25px] w-full px-6 md:px-12">
+        <div className="relative min-h-[140px] md:min-h-[120px] flex items-center justify-center mb-[25px] w-full px-6 md:px-12 max-sm:min-h-[250px] max-sm:px-8 max-sm:mb-[20px]">
 
           <AnimatePresence
             mode="wait"
@@ -200,7 +200,7 @@ const Review = () => {
                 ease: [0.22, 1, 0.36, 1],
               }}
 
-              className="text-xl md:text-[28px] w-[880px]  lg:text-[28px] font-[350] text-[#1D1D1D] leading-[150%] max-w-3xl"
+              className="text-xl md:text-[28px] w-[880px] lg:text-[28px] font-[350] text-[#1D1D1D] leading-[150%] max-w-3xl max-sm:w-full max-sm:max-w-full max-sm:text-[17px] max-sm:leading-[165%] max-sm:px-0"
             >
               {activeReview.quote}
             </motion.p>
@@ -214,7 +214,7 @@ const Review = () => {
             USER INFO
         ===================================================== */}
 
-        <div className="relative min-h-[76px] mb-[24px] flex items-center justify-center">
+        <div className="relative min-h-[76px] mb-[24px] flex items-center justify-center max-sm:min-h-[65px] max-sm:mb-[18px]">
 
           <AnimatePresence
             mode="wait"
@@ -251,11 +251,11 @@ const Review = () => {
               className="text-center"
             >
 
-              <h4 className="text-[22px] leading-[26px] md:text-xl font-semibold text-[#1d1d1d] mb-1">
+              <h4 className="text-[22px] leading-[26px] md:text-xl font-semibold text-[#1d1d1d] mb-1 max-sm:text-[18px] max-sm:leading-[23px]">
                 {activeReview.name}
               </h4>
 
-              <p className="text-sm md:text-sm text-[#1d1d1d] font-[375]">
+              <p className="text-sm md:text-sm text-[#1d1d1d] font-[375] max-sm:text-[13px]">
                 {activeReview.role}
               </p>
 
@@ -271,7 +271,7 @@ const Review = () => {
             CURRENT REVIEW ALWAYS CENTER
         ===================================================== */}
 
-<div className="relative flex items-center justify-center h-[72px] w-[220px] mb-4">
+        <div className="relative flex items-center justify-center h-[72px] w-[220px] mb-4 max-sm:h-[64px] max-sm:w-[190px] max-sm:mb-3">
 
           <AnimatePresence
             initial={false}
@@ -301,16 +301,16 @@ const Review = () => {
                         : 0,
                   }}
 
-                 animate={{
-  opacity: 1,
-  scale: 1,
-  x:
-    rev.position === "left"
-      ? -85
-      : rev.position === "right"
-      ? 85
-      : 0,
-}}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    x:
+                      rev.position === "left"
+                        ? -85
+                        : rev.position === "right"
+                        ? 85
+                        : 0,
+                  }}
 
                   exit={{
                     opacity: 0,
@@ -344,8 +344,8 @@ const Review = () => {
                     cursor-pointer
                     ${
                       isCenter
-                        ? "w-[80px] h-[80px]  border-1 border-[#1D1D1D]"
-                        : "w-[56px] h-[56px] border-1 border-[#1D1D1D]"
+                        ? "w-[80px] h-[80px] border-1 border-[#1D1D1D] max-sm:w-[70px] max-sm:h-[70px]"
+                        : "w-[56px] h-[56px] border-1 border-[#1D1D1D] max-sm:w-[48px] max-sm:h-[48px]"
                     }
                   `}
                   aria-label={`Show review from ${rev.name}`}
@@ -370,98 +370,110 @@ const Review = () => {
         {/* =====================================================
             NAVIGATION BUTTONS
         ===================================================== */}
-
-        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between items-center px-0 pointer-events-none">
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between items-center px-0 pointer-events-none max-sm:px-1">
 
           {/* PREVIOUS */}
 
-<motion.button
-  onClick={handleNext}
+          <motion.button
+            onClick={handlePrev}
 
-  whileHover={{
-    scale: 1.08,
-    x: 3,
-  }}
+            whileHover={{
+              scale: 1.08,
+              x: 3,
+            }}
 
-  whileTap={{
-    scale: 0.92,
-  }}
+            whileTap={{
+              scale: 0.92,
+            }}
 
-  className="
-    pointer-events-auto
-    w-[48px]
-    h-[48px]
-    rounded-[10px]
-    border
-    border-[#1d1d1d]
-    bg-white
-    flex
-    items-center
-    justify-center
-    text-[#1d1d1d]
-    hover:bg-[#FFE3FB]
-    transition-all
-    duration-200
-    ease-in-out
-    
-    cursor-pointer
-    outline-none
+            className="
+              pointer-events-auto
+              w-[48px]
+              h-[48px]
+              rounded-[10px]
+              border
+              border-[#1d1d1d]
+              bg-white
+              flex
+              items-center
+              justify-center
+              text-[#1d1d1d]
+              hover:bg-[#FFE3FB]
+              transition-all
+              duration-200
+              ease-in-out
+              cursor-pointer
+              outline-none
+              shadow-[inset_0_-5px_0_#ddd]
+              active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+              max-sm:w-[38px]
+              max-sm:h-[38px]
+              max-sm:rounded-[8px]
+              max-sm:hidden
+              sm:flex
+              md:flex
+            "
 
-    shadow-[inset_0_-5px_0_#ddd]
-
-    active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
-  "
-
-  aria-label="Next Review"
->
- <img className='rotate-180 mb-1' src={arrow} alt="" />
-</motion.button>
+            aria-label="Previous Review"
+          >
+            <img
+              className="rotate-180 mb-1 max-sm:w-[15px]"
+              src={arrow}
+              alt=""
+            />
+          </motion.button>
 
 
           {/* NEXT */}
 
-<motion.button
-  onClick={handleNext}
+          <motion.button
+            onClick={handleNext}
 
-  whileHover={{
-    scale: 1.08,
-    x: 3,
-  }}
+            whileHover={{
+              scale: 1.08,
+              x: 3,
+            }}
 
-  whileTap={{
-    scale: 0.92,
-  }}
+            whileTap={{
+              scale: 0.92,
+            }}
 
-  className="
-    pointer-events-auto
-    w-[48px]
-    h-[48px]
-    rounded-[10px]
-    border
-    border-[#1d1d1d]
-    bg-white
-    flex
-    items-center
-    justify-center
-    text-[#1d1d1d]
-    hover:bg-[#FFE3FB]
-    transition-all
-    duration-200
-    ease-in-out
-    cursor-pointer
-    outline-none
+            className="
+              pointer-events-auto
+              w-[48px]
+              h-[48px]
+              rounded-[10px]
+              border
+              border-[#1d1d1d]
+              bg-white
+              flex
+              items-center
+              justify-center
+              text-[#1d1d1d]
+              hover:bg-[#FFE3FB]
+              transition-all
+              duration-200
+              ease-in-out
+              cursor-pointer
+              outline-none
+              shadow-[inset_0_-5px_0_#ddd]
+              active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+              max-sm:w-[38px]
+              max-sm:h-[38px]
+              max-sm:rounded-[8px]
+              max-sm:hidden
+              sm:flex
+              md:flex
+            "
 
-    shadow-[inset_0_-5px_0_#ddd]
-
-    active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
-  "
-
-  aria-label="Next Review"
->
- <img className='mb-1' src={arrow} alt="" />
-
- 
-</motion.button>
+            aria-label="Next Review"
+          >
+            <img
+              className="mb-1 max-sm:w-[15px]"
+              src={arrow}
+              alt=""
+            />
+          </motion.button>
 
         </div>
 

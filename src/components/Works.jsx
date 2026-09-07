@@ -77,42 +77,81 @@ const worksData = [
 const Works = () => {
 
   return (
-    <section className="w-full bg-white mt-[160px] px-4 font-sans relative overflow-hidden">
+    <section className="w-full bg-white mt-[90px] md:mt-[160px] px-4 font-sans relative overflow-hidden">
+{/* =========================================================
+    SECTION HEADER
+========================================================= */}
 
-      {/* =========================================================
-          SECTION HEADER
-      ========================================================= */}
+<div
+  className="
+    max-w-[1200px]
+    mb-[90px]
+    mx-auto
+    text-center
 
-      <div className="max-w-[1200px] mb-[90px] mx-auto text-center ">
+    max-sm:w-full
+    max-sm:mb-[45px]
+    max-sm:px-2
+  "
+>
 
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.6,
-            ease: "easeOut"
-          }}
-          className="text-4xl md:text-5xl lg:text-[48px] font-medium w-[850px] mx-auto text-[#1D1D1D] tracking-[-2] mb-[18px]"
-        >
-          My selected works
-        </motion.h2>
+  <motion.h2
+    initial={{ opacity: 0, y: -20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{
+      duration: 0.6,
+      ease: "easeOut"
+    }}
+    className="
+      text-4xl
+      md:text-5xl
+      lg:text-[48px]
+      font-medium
+      w-[850px]
+      mx-auto
+      text-[#1D1D1D]
+      tracking-[-2]
+      mb-[18px]
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-            ease: "easeOut"
-          }}
-          className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[850px] mx-auto font-[375] leading-[150%]"
-        >
-          A collection of ideas turned into thoughtful experiences, purposeful interfaces, and products people enjoy using.
-        </motion.p>
+      max-sm:w-full
+      max-sm:text-[30px]
+      max-sm:leading-[1.15]
+      max-sm:tracking-[-1px]
+      max-sm:mb-[14px]
+    "
+  >
+    My selected works
+  </motion.h2>
 
-      </div>
+  <motion.p
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{
+      duration: 0.6,
+      delay: 0.2,
+      ease: "easeOut"
+    }}
+    className="
+      text-[#1d1d1d]
+      text-lg
+      md:text-[22px]
+      max-w-[850px]
+      mx-auto
+      font-[375]
+      leading-[150%]
+
+      max-sm:w-full
+      max-sm:max-w-[350px]
+      max-sm:text-[15px]
+      max-sm:leading-[165%]
+    "
+  >
+    A collection of ideas turned into thoughtful experiences, purposeful interfaces, and products people enjoy using.
+  </motion.p>
+
+</div>
 
 
       {/* =========================================================

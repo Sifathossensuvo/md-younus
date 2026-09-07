@@ -175,36 +175,40 @@ const Navbar = () => {
       >
         <div className="flex h-full flex-col px-6 pb-10 pt-32">
 
-          {/* Mobile Navigation */}
-          <div className="flex flex-col gap-6">
-            <MenuItem
-              item="Home"
-              href="#home"
-              mobile
-              onClick={closeMenu}
-            />
 
-            <MenuItem
-              item="About"
-              href="#about"
-              mobile
-              onClick={closeMenu}
-            />
+{/* Mobile Navigation */}
+<div className="flex flex-col gap-6">
+  <Link to="/" onClick={closeMenu}>
+    <MenuItem
+      item="Home"
+      href="/"
+      mobile
+    />
+  </Link>
 
-            <MenuItem
-              item="Projects"
-              href="#projects"
-              mobile
-              onClick={closeMenu}
-            />
+  <MenuItem
+    item="About"
+    href="#about"
+    mobile
+    onClick={closeMenu}
+  />
 
-            <MenuItem
-              item="Contact"
-              href="#contact"
-              mobile
-              onClick={closeMenu}
-            />
-          </div>
+  <Link to="/portfolio" onClick={closeMenu}>
+    <MenuItem
+      item="Portfolio"
+      href="/portfolio"
+      mobile
+    />
+  </Link>
+
+  <Link to="/contact" onClick={closeMenu}>
+    <MenuItem
+      item="Contact"
+      href="/contact"
+      mobile
+    />
+  </Link>
+</div>
 
           {/* Mobile Social Icons */}
           <div className="mt-auto flex items-center gap-2">

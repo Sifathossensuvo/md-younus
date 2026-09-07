@@ -17,7 +17,6 @@ import profile1 from '../assets/photo.png';
 import profile2 from '../assets/photo.png';
 import profile3 from '../assets/photo.png';
 
-
 // card image
 import card1 from '../assets/card1.svg';
 import card2 from '../assets/card2.svg';
@@ -43,47 +42,48 @@ const Banner = () => {
   // CARDS DATA
   // ======================================================
 
-const cards = [
-  {
-    id: 1,
-    title: 'My Portfolio',
-    description:
-      'Explore selected projects that showcase my design skills and creative approach.',
-    icon: card1,
-    btnBg: 'bg-[#E3F2FF]',
-    link: '/portfolio',
-  },
+  const cards = [
+    {
+      id: 1,
+      title: 'My Portfolio',
+      description:
+        'Explore selected projects that showcase my design skills and creative approach.',
+      icon: card1,
+      btnBg: 'bg-[#E3F2FF]',
+      link: '/portfolio',
+    },
 
-  {
-    id: 2,
-    title: 'About Me',
-    description: (
-    <>
-      Discover my background,
-      <br />
-      skills, experience, and journey as a designer.
-    </>
-  ),
-    icon: card2,
-    btnBg: 'bg-yellow-100',
-    link: '/portfolio',
-  },
+    {
+      id: 2,
+      title: 'About Me',
+      description: (
+        <>
+          Discover my background,
+          <br />
+          skills, experience, and journey as a designer.
+        </>
+      ),
+      icon: card2,
+      btnBg: 'bg-yellow-100',
+      link: '/portfolio',
+    },
 
-  {
-    id: 3,
-    title: 'Contact Me',
-description: (
-    <>
-   Let’s work together to turn 
-   <br />
-your ideas into meaningful digital experiences.
-    </>
-  ),
-    icon: card3,
-    btnBg: 'bg-[#E3F2FF]',
-    link: '/contact',
-  },
-];
+    {
+      id: 3,
+      title: 'Contact Me',
+      description: (
+        <>
+          Let’s work together to turn
+          <br />
+          your ideas into meaningful digital experiences.
+        </>
+      ),
+      icon: card3,
+      btnBg: 'bg-[#E3F2FF]',
+      link: '/contact',
+    },
+  ];
+
   return (
     <section className="w-full flex flex-col relative overflow-hidden">
 
@@ -109,6 +109,9 @@ your ideas into meaningful digital experiences.
 
           lg:pt-40
           lg:pb-[318px]
+
+          max-sm:pt-12
+          max-sm:pb-36
         "
       >
 
@@ -282,7 +285,6 @@ your ideas into meaningful digital experiences.
               lg:block
               w-[186px]
               h-[93px]
-             
             "
             initial={{
               opacity: 0,
@@ -322,7 +324,6 @@ your ideas into meaningful digital experiences.
 
           {/* ======================================================
               MOBILE PROFILE IMAGE
-              
           ====================================================== */}
 
           <motion.div
@@ -335,6 +336,10 @@ your ideas into meaningful digital experiences.
               flex
               items-center
               justify-center
+
+              max-sm:w-[105px]
+              max-sm:h-[105px]
+              max-sm:mb-7
             "
             initial={{
               opacity: 0,
@@ -426,7 +431,6 @@ your ideas into meaningful digital experiences.
               font-medium
 
               text-[48px]
-              
 
               sm:text-[56px]
               sm:leading-[1.05]
@@ -436,8 +440,12 @@ your ideas into meaningful digital experiences.
 
               lg:text-[90px]
               lg:leading-[94.5px]
-              
-              
+
+              max-sm:text-[37px]
+              max-sm:leading-[112%]
+              max-sm:tracking-[-2.5px]
+              max-sm:w-full
+              max-sm:px-1
             "
           >
 
@@ -447,77 +455,76 @@ your ideas into meaningful digital experiences.
             ====================================================== */}
 
             <span className="hidden md:inline">
-             <div className=''>
-               Hello
-              <span className="">!</span>
+              <div className=''>
+                Hello
+                <span className="">!</span>
 
-              {/* Desktop inline profile */}
-              <span
-                className="
-                  inline-flex
-                  items-center
-                  justify-center
-                  align-middle
-                  mx-3
-                  relative
-                  w-[105px]
-                  h-[105px]
+                {/* Desktop inline profile */}
+                <span
+                  className="
+                    inline-flex
+                    items-center
+                    justify-center
+                    align-middle
+                    mx-3
+                    relative
+                    w-[105px]
+                    h-[105px]
 
-                  lg:w-[105px]
-                  lg:h-[105px]
-                  
-                "
-              >
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={currentImg}
-                    src={profileImages[currentImg]}
-                    alt="Meeko"
-                    initial={{
-                      opacity: 0,
-                      scale: 0.72,
-                      rotate: -18,
-                      filter: 'blur(8px)',
-                    }}
-                    animate={{
-                      opacity: 1,
-                      scale: 1,
-                      rotate: 0,
-                      filter: 'blur(0px)',
-                    }}
-                    exit={{
-                      opacity: 0,
-                      scale: 0.82,
-                      rotate: 18,
-                      filter: 'blur(6px)',
-                    }}
-                    transition={{
-                      duration: 0.65,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="
-                      absolute
-                      -top-3
-                      left-0
-                      w-full
-                      h-full
-                      rounded-full
-                      object-cover
-                      
-                      bg-pink-200
-                      border-2
-                      border-[#1D1D1D]
-                    "
-                  />
-                </AnimatePresence>
-              </span>
+                    lg:w-[105px]
+                    lg:h-[105px]
+                  "
+                >
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentImg}
+                      src={profileImages[currentImg]}
+                      alt="Meeko"
+                      initial={{
+                        opacity: 0,
+                        scale: 0.72,
+                        rotate: -18,
+                        filter: 'blur(8px)',
+                      }}
+                      animate={{
+                        opacity: 1,
+                        scale: 1,
+                        rotate: 0,
+                        filter: 'blur(0px)',
+                      }}
+                      exit={{
+                        opacity: 0,
+                        scale: 0.82,
+                        rotate: 18,
+                        filter: 'blur(6px)',
+                      }}
+                      transition={{
+                        duration: 0.65,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="
+                        absolute
+                        -top-3
+                        left-0
+                        w-full
+                        h-full
+                        rounded-full
+                        object-cover
 
-              I'm Younus,
-             </div>
-             
-             <div>
-               a UI & UX Designer.
-             </div>
+                        bg-pink-200
+                        border-2
+                        border-[#1D1D1D]
+                      "
+                    />
+                  </AnimatePresence>
+                </span>
+
+                I'm Younus,
+              </div>
+
+              <div>
+                a UI & UX Designer.
+              </div>
             </span>
 
             {/* ======================================================
@@ -526,7 +533,7 @@ your ideas into meaningful digital experiences.
             ====================================================== */}
 
             <span className="md:hidden block">
-             Hello! I'm Younus,
+              Hello! I'm Younus,
               <br />
               a UI & UX Designer.
             </span>
@@ -563,7 +570,7 @@ your ideas into meaningful digital experiences.
               text-[#1d1d1d]
 
               text-[18px]
-             font-[375]
+              font-[375]
 
               max-w-[360px]
 
@@ -574,44 +581,53 @@ your ideas into meaningful digital experiences.
               md:max-w-[880px]
               md:leading-[150%]
               lg:text-xl
-              
+
+              max-sm:mt-7
+              max-sm:text-[15px]
+              max-sm:leading-[165%]
+              max-sm:max-w-[350px]
+              max-sm:px-2
             "
           >
-I create intuitive, user-centered digital experiences that balance beautiful design with seamless functionality. With expertise in HTML, CSS, and WordPress, I also bring designs to life as responsive and engaging websites.
+            I create intuitive, user-centered digital experiences that balance beautiful design with seamless functionality. With expertise in HTML, CSS, and WordPress, I also bring designs to life as responsive and engaging websites.
           </motion.p>
 
-<div className="flex items-center justify-center mt-[50px]">
-<div className="border rounded-[10px] border-[#1d1d1d]">
-    <button
-    onClick={() => alert('Downloading Resume...')}
-    className="
-      flex items-center gap-5 
-      px-6 h-[52px] 
-      bg-white text-[#1d1d1d]
-      font-medium text-base 
-      rounded-[10px]
-      border-b-5 border-[#ddd]
-      
-      text-[14px]
-      
-tracking-[-0.3]
-      
-      
-      active:scale-95
-      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
-      transition-all duration-200 ease-in-out
-      cursor-pointer
-      outline-none
+          <div className="flex items-center justify-center mt-[50px] max-sm:mt-7">
+            <div className="border rounded-[10px] border-[#1d1d1d]">
+              <button
+                onClick={() => alert('Downloading Resume...')}
+                className="
+                  flex items-center gap-5
+                  px-6 h-[52px]
+                  bg-white text-[#1d1d1d]
+                  font-medium text-base
+                  rounded-[10px]
+                  border-b-5 border-[#ddd]
 
-      hover:bg-[#FFE3FB]
-    "
-  >
-    <span>Download My Resume</span>
-    {/* dasdfsadfasfsa */}
-<img src={download} alt="" ></img>
-  </button>
-</div>
-</div>
+                  text-[14px]
+
+                  tracking-[-0.3]
+
+                  active:scale-95
+                  active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+                  transition-all duration-200 ease-in-out
+                  cursor-pointer
+                  outline-none
+
+                  hover:bg-[#FFE3FB]
+
+                  max-sm:h-[48px]
+                  max-sm:px-5
+                  max-sm:gap-4
+                  max-sm:text-[13px]
+                "
+              >
+                <span>Download My Resume</span>
+                {/* dasdfsadfasfsa */}
+                <img src={download} alt="" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -627,7 +643,7 @@ tracking-[-0.3]
           relative
           z-20
           border-t
-         border-[#000000]
+          border-[#000000]
         "
       >
 
@@ -637,13 +653,15 @@ tracking-[-0.3]
             mx-auto
 
             -mt-[158px]
-            
 
             md:
 
             pb-[5px]
 
             relative
+
+            max-sm:mt-[-100px]
+            max-sm:pb-5
           "
         >
 
@@ -667,7 +685,7 @@ tracking-[-0.3]
               relative
               h-[380px]
               max-w-5xl
-              
+
               mx-auto
             "
           >
@@ -742,14 +760,12 @@ tracking-[-0.3]
                     left-0
                     right-0
                     mx-auto
-h-full
+                    h-full
 
                     bg-white
                     rounded-[20px]
 
-                  pt-[40px] pb-[50px] px-[40px]
-                  
-                   
+                    pt-[40px] pb-[50px] px-[40px]
 
                     border
                     border-[#000000]
@@ -763,11 +779,11 @@ h-full
 
                   {/* Icon */}
                   <div className="mb-[30px] flex justify-center items-center">
-                     <img
-    src={card.icon}
-    alt={card.title}
-    className="w-[92px] h-17 object-contain"
-  />
+                    <img
+                      src={card.icon}
+                      alt={card.title}
+                      className="w-[92px] h-17 object-contain"
+                    />
                   </div>
 
                   {/* Card Text */}
@@ -780,34 +796,121 @@ h-full
                   </p>
 
                   {/* Action Button */}
-<Link
-  to={card.link}
-  className={`
-    w-[52px]
-    h-[40px]
-    rounded-[50px]
-    flex
-    items-center
-    justify-center
-    border
-    border-[#1d1d1d]
-    bg-[#eef3f9]
-    transition-all
-    duration-200
-    ease-in-out
-    hover:scale-105
-    hover:bg-[#e2ecf7]
-    active:scale-95
-    
-    ${card.btnBg}
-  `}
->
-<img src={arrow} alt="" />
-</Link>
+                  <Link
+                    to={card.link}
+                    className={`
+                      w-[52px]
+                      h-[40px]
+                      rounded-[50px]
+                      flex
+                      items-center
+                      justify-center
+                      border
+                      border-[#1d1d1d]
+                      bg-[#eef3f9]
+                      transition-all
+                      duration-200
+                      ease-in-out
+                      hover:scale-105
+                      hover:bg-[#e2ecf7]
+                      active:scale-95
+
+                      ${card.btnBg}
+                    `}
+                  >
+                    <img src={arrow} alt="" />
+                  </Link>
 
                 </motion.div>
               );
             })}
+          </div>
+
+          {/* ======================================================
+              MOBILE CARDS
+              Only added for phone
+          ====================================================== */}
+
+          <div
+            className="
+              md:hidden
+              flex
+              flex-col
+              items-center
+              gap-4
+              w-full
+              max-sm:gap-4
+            "
+          >
+            {cards.map((card) => (
+              <div
+                key={card.id}
+                className="
+                  w-full
+                  max-w-[360px]
+                  min-h-[270px]
+                  bg-white
+                  rounded-[20px]
+                  pt-7
+                  pb-7
+                  px-6
+                  border
+                  border-[#000000]
+                  flex
+                  flex-col
+                  items-center
+                  text-center
+                  max-sm:min-h-[250px]
+                  max-sm:pt-6
+                  max-sm:pb-6
+                  max-sm:px-5
+                "
+              >
+
+                {/* Icon */}
+                <div className="mb-5 flex justify-center items-center">
+                  <img
+                    src={card.icon}
+                    alt={card.title}
+                    className="w-[78px] h-[58px] object-contain"
+                  />
+                </div>
+
+                {/* Card Text */}
+                <h3 className="text-xl leading-[28px] font-medium text-[#1d1d1d] mb-3">
+                  {card.title}
+                </h3>
+
+                <p className="text-[#1d1d1d] text-[14px] leading-[150%] mb-5 flex-grow font-[375]">
+                  {card.description}
+                </p>
+
+                {/* Action Button */}
+                <Link
+                  to={card.link}
+                  className={`
+                    w-[52px]
+                    h-[40px]
+                    rounded-[50px]
+                    flex
+                    items-center
+                    justify-center
+                    border
+                    border-[#1d1d1d]
+                    bg-[#eef3f9]
+                    transition-all
+                    duration-200
+                    ease-in-out
+                    active:scale-95
+
+                    ${card.btnBg}
+                  `}
+                >
+                  <img src={arrow} alt="" />
+                </Link>
+
+              </div>
+            ))}
           </div>
 
         </div>

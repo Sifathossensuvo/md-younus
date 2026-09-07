@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <section id='about' className="w-full bg-white mt-40  px-4 md:px-12 font-sans relative overflow-hidden">
+    <section id='about' className="w-full bg-white mt-[90px] md:mt-40  px-4 md:px-12 font-sans relative overflow-hidden">
       
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start justify-between ">
         
@@ -38,7 +38,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative w-full mt-2 mx-h-[660px] max-w-[560px]"
+          className="relative w-full mb-10 md:mb-0 mt-2 mx-h-[660px] max-w-[560px]"
         >
           {/* Pink Background Card Container (Fixed with GPU rendering style for perfect border radius) */}
           <div 

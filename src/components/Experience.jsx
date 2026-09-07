@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 
 const Experience = () => {
@@ -70,7 +68,22 @@ const Experience = () => {
   };
 
   return (
-    <section className="w-full bg-[#E3E3FF] pt-1 pb-[160px] border-b border-[#1D1D1D] px-4 md:px-12 font-sans relative overflow-hidden">
+    <section className="
+      w-full
+      bg-[#E3E3FF]
+      pt-1
+      pb-[160px]
+      border-b
+      border-[#1D1D1D]
+      px-4
+      md:px-12
+      font-sans
+      relative
+      overflow-hidden
+
+      max-sm:pb-[80px]
+      max-sm:px-4
+    ">
 
       {/* Background Glow 01 */}
       <motion.div
@@ -82,7 +95,22 @@ const Experience = () => {
           x: [0, 25, -15, 0],
           y: [0, -20, 15, 0]
         }}
-        className="absolute -top-32 -left-32 w-[400px] h-[400px] rounded-full bg-pink-200/30 blur-[100px] pointer-events-none"
+        className="
+          absolute
+          -top-32
+          -left-32
+          w-[400px]
+          h-[400px]
+          rounded-full
+          bg-pink-200/30
+          blur-[100px]
+          pointer-events-none
+
+          max-sm:w-[250px]
+          max-sm:h-[250px]
+          max-sm:-top-20
+          max-sm:-left-20
+        "
       />
 
       {/* Background Glow 02 */}
@@ -95,7 +123,22 @@ const Experience = () => {
           x: [0, -25, 20, 0],
           y: [0, 20, -15, 0]
         }}
-        className="absolute -bottom-40 -right-32 w-[450px] h-[450px] rounded-full bg-blue-200/30 blur-[110px] pointer-events-none"
+        className="
+          absolute
+          -bottom-40
+          -right-32
+          w-[450px]
+          h-[450px]
+          rounded-full
+          bg-blue-200/30
+          blur-[110px]
+          pointer-events-none
+
+          max-sm:w-[280px]
+          max-sm:h-[280px]
+          max-sm:-bottom-24
+          max-sm:-right-24
+        "
       />
 
       {/* Tiny Floating Orb */}
@@ -109,7 +152,18 @@ const Experience = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-[22%] left-[8%] w-3 h-3 rounded-full bg-white/80 blur-[1px]"
+        className="
+          absolute
+          top-[22%]
+          left-[8%]
+          w-3
+          h-3
+          rounded-full
+          bg-white/80
+          blur-[1px]
+
+          max-sm:left-[5%]
+        "
       />
 
       <motion.div
@@ -123,14 +177,35 @@ const Experience = () => {
           ease: "easeInOut",
           delay: 1
         }}
-        className="absolute bottom-[25%] right-[10%] w-4 h-4 rounded-full bg-white/70 blur-[1px]"
+        className="
+          absolute
+          bottom-[25%]
+          right-[10%]
+          w-4
+          h-4
+          rounded-full
+          bg-white/70
+          blur-[1px]
+
+          max-sm:right-[5%]
+        "
       />
 
       {/* Section Header */}
-      <div className="max-w-[1200px] mx-auto text-center mb-[70px] relative z-10">
+      <div className="
+        max-w-[1200px]
+        mx-auto
+        text-center
+        mb-[70px]
+        relative
+        z-10
 
+        max-sm:mb-[40px]
+        max-sm:w-full
+        max-sm:px-1
+      ">
 
-   <motion.h2
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -138,7 +213,23 @@ const Experience = () => {
             duration: 0.6,
             ease: "easeOut"
           }}
-          className="text-4xl md:text-5xl lg:text-[48px] font-medium w-[850px] mx-auto text-[#1D1D1D] tracking-[-2] mb-[18px]"
+          className="
+            text-4xl
+            md:text-5xl
+            lg:text-[48px]
+            font-medium
+            w-[850px]
+            mx-auto
+            text-[#1D1D1D]
+            tracking-[-2]
+            mb-[18px]
+
+            max-sm:w-full
+            max-sm:text-[30px]
+            max-sm:leading-[115%]
+            max-sm:tracking-[-1px]
+            max-sm:mb-[14px]
+          "
         >
           The numbers tell the story
         </motion.h2>
@@ -152,9 +243,22 @@ const Experience = () => {
             delay: 0.2,
             ease: "easeOut"
           }}
-          className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[940px] mx-auto font-[375] leading-[150%]"
+          className="
+            text-[#1d1d1d]
+            text-lg
+            md:text-[22px]
+            max-w-[940px]
+            mx-auto
+            font-[375]
+            leading-[150%]
+
+            max-sm:w-full
+            max-sm:max-w-[350px]
+            max-sm:text-[15px]
+            max-sm:leading-[165%]
+          "
         >
-         Years of experience, countless design decisions, and measurable results these numbers reflect the consistency, impact, and value I bring to every project.
+          Years of experience, countless design decisions, and measurable results these numbers reflect the consistency, impact, and value I bring to every project.
         </motion.p>
       </div>
 
@@ -167,130 +271,241 @@ const Experience = () => {
           once: true,
           amount: 0.15
         }}
-        className="max-w-[1050px] mx-auto flex flex-col items-center gap-6 relative z-10"
+        className="
+          max-w-[1050px]
+          mx-auto
+          flex
+          flex-col
+          items-center
+          gap-6
+          relative
+          z-10
+
+          max-sm:gap-4
+          max-sm:w-full
+        "
       >
 
         {/* Top Row */}
-<div className="flex flex-wrap justify-center gap-6 w-full">
+        <div className="
+          flex
+          flex-wrap
+          justify-center
+          gap-6
+          w-full
 
-  {stats.slice(0, 3).map((item) => (
-    <motion.div
-      key={item.id}
-      variants={cardVariants}
-      
-     
-      className="group relative overflow-hidden bg-white rounded-full border border-[#1d1d1d] h-[92px] w-fit px-[30px] flex items-center justify-start gap-[16px]"
-    >
+          max-sm:flex-col
+          max-sm:items-center
+          max-sm:gap-4
+        ">
 
-      {/* Moving Shine */}
-      <motion.div
+          {stats.slice(0, 3).map((item) => (
+            <motion.div
+              key={item.id}
+              variants={cardVariants}
 
-       
-        className="absolute inset-0   to-transparent skew-x-[-20deg] pointer-events-none"
-      />
+              className="
+                group
+                relative
+                overflow-hidden
+                bg-white
+                rounded-full
+                border
+                border-[#1d1d1d]
+                h-[92px]
+                w-fit
+                px-[30px]
+                flex
+                items-center
+                justify-start
+                gap-[16px]
 
-      {/* Soft Hover Glow */}
-      <div
-        className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 s pointer-events-none"
-        style={{
-          backgroundColor: item.strokeColor
-        }}
-      />
+                max-sm:w-full
+                max-sm:max-w-[350px]
+                max-sm:h-[78px]
+                max-sm:px-5
+                max-sm:gap-3
+                max-sm:justify-start
+              "
+            >
 
-      {/* Number */}
-      <motion.span
-        whileHover={{
-          scale: 1.12,
-          x: 3
-        }}
-        transition={{
-          duration: 0.3,
-          ease: "easeOut"
-        }}
-        className="relative z-10 text-3xl md:text-[54px] font-semibold tracking-tight"
-        style={{
-          color: item.fillColor,
-          WebkitTextStroke: `2.5px ${item.strokeColor}`,
-          paintOrder: 'stroke fill'
-        }}
-      >
-        {item.value}
-      </motion.span>
+              {/* Moving Shine */}
+              <motion.div
+                className="absolute inset-0 to-transparent skew-x-[-20deg] pointer-events-none"
+              />
 
-      {/* Label */}
-      <span className="relative z-10 text-normal md:text-[16px] font-[375] text-[#1d1d1d] text-left leading-[150%]">
-        {item.label}
-      </span>
+              {/* Soft Hover Glow */}
+              <div
+                className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 s pointer-events-none"
+                style={{
+                  backgroundColor: item.strokeColor
+                }}
+              />
 
-    </motion.div>
-  ))}
+              {/* Number */}
+              <motion.span
+                whileHover={{
+                  scale: 1.12,
+                  x: 3
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeOut"
+                }}
+                className="
+                  relative
+                  z-10
+                  text-3xl
+                  md:text-[54px]
+                  font-semibold
+                  tracking-tight
 
-</div>
+                  max-sm:text-[38px]
+                  max-sm:min-w-[82px]
+                "
+                style={{
+                  color: item.fillColor,
+                  WebkitTextStroke: `2.5px ${item.strokeColor}`,
+                  paintOrder: 'stroke fill'
+                }}
+              >
+                {item.value}
+              </motion.span>
+
+              {/* Label */}
+              <span className="
+                relative
+                z-10
+                text-normal
+                md:text-[16px]
+                font-[375]
+                text-[#1d1d1d]
+                text-left
+                leading-[150%]
+
+                max-sm:text-[13px]
+                max-sm:leading-[145%]
+              ">
+                {item.label}
+              </span>
+
+            </motion.div>
+          ))}
+
+        </div>
 
         {/* Bottom Row */}
-        <div className="flex justify-center flex-wrap gap-6 w-full">
+        <div className="
+          flex
+          justify-center
+          flex-wrap
+          gap-6
+          w-full
+
+          max-sm:flex-col
+          max-sm:items-center
+          max-sm:gap-4
+        ">
 
           {stats.slice(3, 5).map((item) => (
-    <motion.div
-      key={item.id}
-      variants={cardVariants}
-      
-     
-      className="group relative overflow-hidden bg-white rounded-full border border-[#1d1d1d] h-[92px] w-fit px-[30px] flex items-center justify-start gap-[16px]"
-    >
+            <motion.div
+              key={item.id}
+              variants={cardVariants}
 
-      {/* Moving Shine */}
-      <motion.div
+              className="
+                group
+                relative
+                overflow-hidden
+                bg-white
+                rounded-full
+                border
+                border-[#1d1d1d]
+                h-[92px]
+                w-fit
+                px-[30px]
+                flex
+                items-center
+                justify-start
+                gap-[16px]
 
-       
-        className="absolute inset-0   to-transparent skew-x-[-20deg] pointer-events-none"
-      />
+                max-sm:w-full
+                max-sm:max-w-[350px]
+                max-sm:h-[78px]
+                max-sm:px-5
+                max-sm:gap-3
+                max-sm:justify-start
+              "
+            >
 
-      {/* Soft Hover Glow */}
-      <div
-        className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 s pointer-events-none"
-        style={{
-          backgroundColor: item.strokeColor
-        }}
-      />
+              {/* Moving Shine */}
+              <motion.div
+                className="absolute inset-0 to-transparent skew-x-[-20deg] pointer-events-none"
+              />
 
-      {/* Number */}
-      <motion.span
-        whileHover={{
-          scale: 1.12,
-          x: 3
-        }}
-        transition={{
-          duration: 0.3,
-          ease: "easeOut"
-        }}
-        className="relative z-10 text-3xl md:text-[54px] font-semibold tracking-tight"
-        style={{
-          color: item.fillColor,
-          WebkitTextStroke: `2.5px ${item.strokeColor}`,
-          paintOrder: 'stroke fill'
-        }}
-      >
-        {item.value}
-      </motion.span>
+              {/* Soft Hover Glow */}
+              <div
+                className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full blur-2xl opacity-0 s pointer-events-none"
+                style={{
+                  backgroundColor: item.strokeColor
+                }}
+              />
 
-      {/* Label */}
-      <span className="relative z-10 text-normal md:text-[16px] font-[375] text-[#1d1d1d] text-left leading-[150%]">
-        {item.label}
-      </span>
+              {/* Number */}
+              <motion.span
+                whileHover={{
+                  scale: 1.12,
+                  x: 3
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeOut"
+                }}
+                className="
+                  relative
+                  z-10
+                  text-3xl
+                  md:text-[54px]
+                  font-semibold
+                  tracking-tight
 
-    </motion.div>
+                  max-sm:text-[38px]
+                  max-sm:min-w-[82px]
+                "
+                style={{
+                  color: item.fillColor,
+                  WebkitTextStroke: `2.5px ${item.strokeColor}`,
+                  paintOrder: 'stroke fill'
+                }}
+              >
+                {item.value}
+              </motion.span>
+
+              {/* Label */}
+              <span className="
+                relative
+                z-10
+                text-normal
+                md:text-[16px]
+                font-[375]
+                text-[#1d1d1d]
+                text-left
+                leading-[150%]
+
+                max-sm:text-[13px]
+                max-sm:leading-[145%]
+              ">
+                {item.label}
+              </span>
+
+            </motion.div>
           ))}
 
         </div>
 
       </motion.div>
 
-
-
     </section>
   );
 };
 
 export default Experience;
-
