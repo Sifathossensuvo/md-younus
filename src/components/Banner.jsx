@@ -17,6 +17,7 @@ import profile1 from '../assets/photo.png';
 import profile2 from '../assets/photo.png';
 import profile3 from '../assets/photo.png';
 
+
 // card image
 import card1 from '../assets/card1.svg';
 import card2 from '../assets/card2.svg';
