@@ -11,7 +11,7 @@ import arrowSvg from '../assets/arrow.svg';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#1A1A1A] text-white pt-40 pb-10 px-4 md:px-12 font-sans relative overflow-visible">
+    <footer className="w-full bg-[#1A1A1A] text-white pt-40 pb-10 font-sans relative overflow-visible">
  <div className='max-w-[1200px] mx-auto'>
          
 
@@ -54,7 +54,7 @@ const Footer = () => {
 </Link>
 
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center relative z-10">
+      <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center relative z-10">
 <div className=''>
     {/* div content */}
 <div className='space-y-0 -mb-[50px]'>

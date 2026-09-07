@@ -29,7 +29,7 @@ const About = () => {
   return (
     <section id='about' className="w-full bg-white mt-40  px-4 md:px-12 font-sans relative overflow-hidden">
       
-      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-30">
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start justify-between ">
         
         {/* --- LEFT SIDE: Profile Image Card with Inner Spinning Badge --- */}
         {/* --- LEFT SIDE: Profile Image Card with Inner Spinning Badge --- */}
@@ -94,14 +94,14 @@ const About = () => {
         </motion.div>
 
         {/* --- RIGHT SIDE: Heading, Bio, and Skill Progress Bars --- */}
-        <div className="w-full  flex flex-col items-start text-left">
+     <div className="w-full lg:w-[553px] lg:shrink-0 flex flex-col items-start text-left">
           
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-[52px] font-medium text-[#1A1A1A]  mb-5 tracking-[-2px]"
+            className="text-4xl md:text-5xl lg:text-[52px] font-medium text-[#1A1A1A] mb-5 tracking-[-2px]"
           >
             Hey! That’s me.
           </motion.h2>
@@ -111,7 +111,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-[#1D1D1D] font-[375] text-base md:text-lg leading-[160%] mb-5"
+            className="text-[#1D1D1D] text-base md:text-[17px] w-full leading-[160%] mb-5"
           >
             I’m Younus, a Senior UI/UX & Product Designer with 8+ years of experience crafting digital experiences that are purposeful, intuitive, and built around real user needs. From websites and mobile apps to SaaS platforms, dashboards, eCommerce experiences, and conversion-focused landing pages, I enjoy turning complex ideas into clear and engaging products.
           </motion.p>
@@ -121,7 +121,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-[#1D1D1D] text-base md:text-[17px] leading-[160%] mb-5"
+            className="text-[#1D1D1D] text-base md:text-[17px] w-full leading-[160%] mb-5"
           >
            My approach goes beyond making things look good. I dig into the problem, understand user behaviour and business goals, and use research, strategy, and thoughtful design decisions to create experiences that feel simple, useful, and natural to navigate.
           </motion.p>
@@ -131,7 +131,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-[#1D1D1D] text-base md:text-[17px] leading-[160%] mb-[60px]"
+            className="text-[#1D1D1D] text-base md:text-[17px] w-full leading-[160%] mb-[60px]"
           >
           With a strong command of Figma, Adobe Creative Suite, HTML, CSS, and WordPress, I bridge the gap between design and execution. I’m passionate about solving meaningful problems, challenging the obvious, and creating digital experiences that deliver real value for both people and businesses.
           </motion.p>
