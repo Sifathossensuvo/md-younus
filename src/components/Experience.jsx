@@ -210,7 +210,7 @@ const Experience = () => {
         className="relative z-10 text-3xl md:text-[54px] font-semibold tracking-tight"
         style={{
           color: item.fillColor,
-          WebkitTextStroke: `2px ${item.strokeColor}`,
+          WebkitTextStroke: `2.5px ${item.strokeColor}`,
           paintOrder: 'stroke fill'
         }}
       >
@@ -267,7 +267,7 @@ const Experience = () => {
         className="relative z-10 text-3xl md:text-[54px] font-semibold tracking-tight"
         style={{
           color: item.fillColor,
-          WebkitTextStroke: `2px ${item.strokeColor}`,
+          WebkitTextStroke: `2.5px ${item.strokeColor}`,
           paintOrder: 'stroke fill'
         }}
       >
