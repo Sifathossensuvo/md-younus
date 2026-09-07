@@ -53,7 +53,7 @@ const Navbar = () => {
           {/* Logo */}
 <Link to="/"><img src={logo} href="#home"
             onClick={closeMenu}
-            className="w-[103px] h-[23px] font-medium tracking-tight "/></Link>
+            className="w-[103px] h-[23px] hover:cursor-pointer font-medium tracking-tight "/></Link>
  
           {/* Desktop Menu */}
           <div className="hidden items-center gap-20 md:flex text-[#1D1D1D]">
