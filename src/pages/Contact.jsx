@@ -465,7 +465,7 @@ await emailjs.sendForm(
       "
     >
       <span>
-        {sending ? 'Sending...' : 'Send a Message'}
+        {sending ? 'Sending...' : 'Send Message'}
       </span>
     </button>
   </div>
@@ -587,26 +587,26 @@ await emailjs.sendForm(
               >
                 <span>{faq.question}</span>
 
-                <motion.span
-                  animate={{
-                    rotate: isOpen ? 45 : 0,
-                  }}
-                  transition={{
-                    duration: 0.45,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="
-                    ml-5
-                    shrink-0
-                    text-[22px]
-                    w-5
-                    h-5
-                    leading-none
-                    font-normal
-                  "
-                >
-                  +
-                </motion.span>
+<motion.span
+  animate={{
+    rotate: 0,
+  }}
+  transition={{
+    duration: 0.45,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  className="
+    ml-5
+    shrink-0
+    text-[22px]
+    w-5
+    h-5
+    leading-none
+    font-normal
+  "
+>
+  {isOpen ? "-" : "+"}
+</motion.span>
               </button>
 
               {/* Answer */}

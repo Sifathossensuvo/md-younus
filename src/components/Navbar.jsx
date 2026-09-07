@@ -8,10 +8,10 @@ import {
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from '../assets/logo.svg'
 import linkedin from '../assets/navicon/linkedin.svg'
-import facebook from '../assets/navicon/facebook.svg'
+import behance from '../assets/navicon/b2.svg'
 import dribbble from '../assets/navicon/dribbble.svg'
 import linkedinhover from '../assets/navicon/linkedinhover.svg'
-import facebookhover from '../assets/navicon/facebookhover.svg'
+import behancehover from '../assets/navicon/b3.svg'
 import dribbblehover from '../assets/navicon/dribbblehover.svg'
 import { Link } from "react-router-dom";
 
@@ -76,13 +76,13 @@ const Navbar = () => {
    {/* icon first */}
   <img
     className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
-    src={facebook}
+    src={linkedin}
     alt=""
   />
   {/* icon second */}
   <img
     className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
-    src={facebookhover}
+    src={linkedinhover}
     alt=""
   />
  
@@ -124,13 +124,13 @@ const Navbar = () => {
    {/* icon first */}
   <img
     className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
-    src={linkedin}
+    src={behance}
     alt=""
   />
   {/* icon second */}
   <img
     className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
-    src={linkedinhover}
+    src={behancehover}
     alt=""
   />
  

@@ -526,7 +526,7 @@ your ideas into meaningful digital experiences.
             ====================================================== */}
 
             <span className="md:hidden block">
-              I'm Younus,
+             Hello! I'm Younus,
               <br />
               a UI & UX Designer.
             </span>

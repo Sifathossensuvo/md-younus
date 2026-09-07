@@ -7,6 +7,7 @@ import spinningText from '../assets/spinneing-text.svg'
 
 
 import profileImg from '../assets/profile.png'; //
+import { Link } from 'react-router-dom';
 
 const About = () => {
   // Skills Data Array (Ordered row-by-row matching your reference image with pastel colors)
@@ -52,7 +53,8 @@ const About = () => {
             />
             
             {/* Infinite Spinning Circular Badge */}
-<div className="absolute bottom-6 border border-[#1D1D1D] rounded-full left-6 md:bottom-[30px] md:left-[30px] w-[150px] h-[150px] pointer-events-none z-10">
+<Link to="/contact">
+<div className="absolute bottom-6 border border-[#1D1D1D] rounded-full left-6 md:bottom-[30px] md:left-[30px] w-[150px] h-[150px]  z-10">
 
   {/* Rotating Circle */}
   <motion.div
@@ -86,6 +88,7 @@ const About = () => {
   </div>
 
 </div>
+</Link>
 
           </div>
         </motion.div>

@@ -138,10 +138,7 @@ const AllProjects = () => {
     const [loading, setLoading] = useState(false);
 
     const handleLoadMore = () => {
-        if (visibleCount >= allWorksData.length) {
-            alert('No Project Found!!');
-            return;
-        }
+        
 
         
 

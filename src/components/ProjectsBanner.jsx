@@ -17,7 +17,7 @@ const ProjectsBanner = () => {
         </h1>
 
         {/* Description Paragraph */}
-        <p className="text-[18px] md:text-[22px] font-light text-[#1d1d1d] leading-[150%] max-w-[850px] mx-auto">
+        <p className="text-[18px] md:text-[22px] font-[375] text-[#1d1d1d] leading-[150%] max-w-[850px] ">
           A collection of ideas turned into thoughtful experiences, purposeful interfaces, and products people enjoy using.
         </p>
       </motion.div>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiMail } from 'react-icons/fi';
@@ -16,40 +16,42 @@ const Footer = () => {
          
 
             {/* Infinite Spinning Circular Badge */}
-<div className="absolute left-1/2 -translate-x-1/2 -top-20 border border-[#1D1D1D]  rounded-full  w-[150px] h-[150px] pointer-events-none ">
+<Link to="/contact">
+  <div className="absolute left-1/2 -translate-x-1/2 -top-20 border border-[#1D1D1D] rounded-full w-[150px] h-[150px]">
 
-  {/* Rotating Circle */}
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{
-      repeat: Infinity,
-      duration: 12,
-      ease: "linear",
-    }}
-    className="w-full  h-full relative flex items-center justify-center bg-[#FFE7A9] rounded-full  border border-[#1d1d1d]"
-  >
+    {/* Rotating Circle */}
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{
+        repeat: Infinity,
+        duration: 12,
+        ease: "linear",
+      }}
+      className="w-full h-full relative flex items-center justify-center bg-[#FFE7A9] rounded-full border border-[#1d1d1d]"
+    >
 
-    {/* SVG Text Image */}
-    <img
-      src={spinningText}
-      alt=""
-      className="absolute inset-0 w-full h-full object-contain p-4"
-    />
-
-  </motion.div>
-
-  {/* Static Center Mail Icon */}
-  <div className="absolute inset-0 flex items-center justify-center">
-    <div className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center ">
+      {/* SVG Text Image */}
       <img
-        src={gmail}
+        src={spinningText}
         alt=""
-        className="w-[28px] h-[19px] object-contain"
+        className="absolute inset-0 w-full h-full object-contain p-4"
       />
-    </div>
-  </div>
 
-</div>
+    </motion.div>
+
+    {/* Static Center Mail Icon */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center">
+        <img
+          src={gmail}
+          alt=""
+          className="w-[28px] h-[19px] object-contain"
+        />
+      </div>
+    </div>
+
+  </div>
+</Link>
 
       {/* Container */}
       <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center relative z-10">
