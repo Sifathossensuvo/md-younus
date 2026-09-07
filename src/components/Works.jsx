@@ -13,6 +13,7 @@ import work7 from '../assets/projectcard.png';
 import work8 from '../assets/projectcard.png';
 
 import arrow from '../assets/bannerarrow.svg'
+import { Link } from 'react-router-dom';
 
 const worksData = [
   {
@@ -143,9 +144,10 @@ const Works = () => {
           Are you ready to see more?
         </h2>
 
+<Link to="/portfolio">
 <div className="inline-block border  rounded-[10px] border-[#1d1d1d]">
     <button
-    onClick={() => alert('Downloading Resume...')}
+   
     className="
       flex  items-center
       px-6 h-[54px] 
@@ -174,6 +176,7 @@ tracking-[-0.3]
 
   </button>
 </div>
+</Link>
 
       </div>
 

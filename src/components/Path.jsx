@@ -5,6 +5,7 @@ import process1 from "../assets/process1.svg";
 import process2 from "../assets/process2.svg";
 import process3 from "../assets/process.svg";
 import process4 from "../assets/process4.svg";
+import { Link } from "react-router-dom";
 
 
 const Path = () => {
@@ -82,9 +83,10 @@ const Path = () => {
 My process blends research, strategy, and creativity to turn complex ideas into clear, purposeful experiences. I start by understanding the problem, users, and goals before shaping solutions that are both meaningful and effective.
             </motion.p>
 
+<Link to="/contact">
 <div className="inline-block border mt-[30px] rounded-[10px] border-[#1d1d1d]">
     <button
-    onClick={() => alert('Downloading Resume...')}
+   
     className="
       flex  items-center
       px-6 h-[54px] 
@@ -113,6 +115,8 @@ tracking-[-0.3]
 
   </button>
 </div>
+
+</Link>
           </div>
         </div>
 

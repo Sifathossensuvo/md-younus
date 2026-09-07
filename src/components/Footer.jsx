@@ -16,7 +16,7 @@ const Footer = () => {
          
 
             {/* Infinite Spinning Circular Badge */}
-<div className="absolute left-[45%] -top-20 border border-[#1D1D1D]  rounded-full  w-[150px] h-[150px] pointer-events-none ">
+<div className="absolute left-1/2 -translate-x-1/2 -top-20 border border-[#1D1D1D]  rounded-full  w-[150px] h-[150px] pointer-events-none ">
 
   {/* Rotating Circle */}
   <motion.div
@@ -104,9 +104,10 @@ const Footer = () => {
         </motion.p>
 
 {/* ......button.... */}
-<div className="inline-block border mt-[30px] rounded-[10px] border-[#1d1d1d]">
+<Link to="/contact">
+  <div className="inline-block border mt-[30px] rounded-[10px] border-[#1d1d1d]">
     <button
-    onClick={() => alert('Downloading Resume...')}
+    
     className="
       flex  items-center
       px-6 h-[54px] 
@@ -135,6 +136,7 @@ tracking-[-0.3]
 
   </button>
 </div>
+</Link>
 </div>
 
 {/* arrow */}

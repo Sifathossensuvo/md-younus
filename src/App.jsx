@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AllProjects from "./components/AllProjects";
+import Contact from "./pages/Contact";
+
 
 const App = () => {
   const location = useLocation();
@@ -34,6 +36,9 @@ const App = () => {
       easing: (t) => 1 - Math.pow(1 - t, 4),
     });
 
+    // route change hole lenis ke force kore top-e pathanor jonno window.lenis assign kora holo
+    window.lenis = lenis;
+
     let rafId;
     const raf = (time) => {
       lenis.raf(time);
@@ -44,8 +49,18 @@ const App = () => {
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
+      window.lenis = null;
     };
   }, []);
+
+  // Proti bar route change hole 100% reliable vabe top-e niye jabe
+  useEffect(() => {
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
 
   return (
     <motion.main
@@ -61,9 +76,13 @@ const App = () => {
 
       {/* 2. Routes er maddhome page change hobe */}
       <div className="flex-grow">
+       
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<AllProjects />} />
+          <Route path="/contact" element={<Contact></Contact>} />
+          
         </Routes>
       </div>
 

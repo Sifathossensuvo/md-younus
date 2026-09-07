@@ -66,7 +66,7 @@ const cards = [
   ),
     icon: card2,
     btnBg: 'bg-yellow-100',
-    link: '/about',
+    link: '/portfolio',
   },
 
   {
