@@ -409,7 +409,7 @@ const AnimatedProjectCard = ({ work, index }) => {
             md:text-[12px]
             font-[475]
             mt-10
-            tracking-[18.3px]
+            
             text-[#1d1d1d]
             flex
             items-center
