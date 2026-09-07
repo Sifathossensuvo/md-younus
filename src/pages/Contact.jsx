@@ -325,7 +325,7 @@ await emailjs.sendForm(
                 <input
                   type="text"
                   name="user_name"
-                  placeholder="What is your name*"
+                  placeholder="What is your name?"
                   required
                   className="
                     w-full

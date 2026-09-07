@@ -51,9 +51,9 @@ const Navbar = () => {
         <div className="relative z-50 mx-auto flex max-w-[1200px] items-center justify-between rounded-[20px] border-1 border-[#1D1D1D] bg-white px-[30px] py-[15px] sm:px-5">
 
           {/* Logo */}
-        <img src={logo} href="#home"
+<Link to="/"><img src={logo} href="#home"
             onClick={closeMenu}
-            className="w-[103px] h-[23px] font-medium tracking-tight "/>
+            className="w-[103px] h-[23px] font-medium tracking-tight "/></Link>
  
           {/* Desktop Menu */}
           <div className="hidden items-center gap-20 md:flex text-[#1D1D1D]">
