@@ -143,6 +143,8 @@ const AllProjects = () => {
             return;
         }
 
+        
+
         setLoading(true);
         setTimeout(() => {
             setVisibleCount((prev) => prev + 8);
