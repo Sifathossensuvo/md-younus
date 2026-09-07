@@ -13,6 +13,7 @@ import dribbble from '../assets/navicon/dribbble.svg'
 import linkedinhover from '../assets/navicon/linkedinhover.svg'
 import facebookhover from '../assets/navicon/facebookhover.svg'
 import dribbblehover from '../assets/navicon/dribbblehover.svg'
+import { Link } from "react-router-dom";
 
 const menuItems = ["Home", "About", "Projects", "Contact"];
 
@@ -24,7 +25,7 @@ const MenuItem = ({ item, href, mobile = false, onClick }) => {
   className={`group relative block overflow-hidden text-[#1D1D1D] ${
     mobile
       ? "text-[18px] font-[525]"
-      : "h-[13px] leading-[22.5px] tracking-[-0.36px] text-[18px] flex items-center font-[525]"
+      : "leading-[22.5px] tracking-[-0.36px] text-[18px] flex items-center font-[525]"
   }`}
 >
   <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
@@ -56,9 +57,9 @@ const Navbar = () => {
  
           {/* Desktop Menu */}
           <div className="hidden items-center gap-20 md:flex text-[#1D1D1D]">
-            <MenuItem item="Home" href="#home"/>
+            <Link to="/"><MenuItem item="Home"/></Link>
             <MenuItem item="About" href="#about" />
-            <MenuItem item="Portfolio" href="#projects" />
+            <Link to="/portfolio"><MenuItem item="Portfolio" /></Link>
             <MenuItem item="Contact" href="#contact" />
           </div>
 

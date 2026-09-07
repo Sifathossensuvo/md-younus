@@ -1,17 +1,28 @@
+// src/App.jsx
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Lenis from "lenis";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import Header from "./components/Header";
-import Works from "./components/Works";
-import Review from "./components/Review";
-import Path from "./components/Path";
-import Experience from "./components/Experience";
-import About from "./components/About";
-import Table from "./components/Table";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AllProjects from "./components/AllProjects";
 
 const App = () => {
+  const location = useLocation();
+
+  // Shudhu Navbar-er pechoner background color route onujaye change hobe
+  const getNavBackground = () => {
+    switch (location.pathname) {
+      case "/portfolio":
+        return "bg-[#FAF3F0]"; // Portfolio page-e nav er pechone ei color thakbe
+      default:
+        return "bg-[#E3E3FF]"; // Home page ba onnanno page-e ei color thakbe
+    }
+  };
+
+  // Lenis smooth scroll setup
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.35,
@@ -20,17 +31,14 @@ const App = () => {
       touchMultiplier: 1,
       syncTouch: true,
       gestureOrientation: "vertical",
-
       easing: (t) => 1 - Math.pow(1 - t, 4),
     });
 
     let rafId;
-
     const raf = (time) => {
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
     };
-
     rafId = requestAnimationFrame(raf);
 
     return () => {
@@ -41,33 +49,26 @@ const App = () => {
 
   return (
     <motion.main
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="min-h-screen w-full"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      className="min-h-screen w-full flex flex-col justify-between"
     >
-      <Header />
+      {/* 1. Shudhu Navbar er wrapper-e dynamic background thakbe */}
+      <div className={getNavBackground()}>
+        <Navbar />
+      </div>
 
-      <Works />
+      {/* 2. Routes er maddhome page change hobe */}
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<AllProjects />} />
+        </Routes>
+      </div>
 
-      <Review />
-
-      <Path />
-
-      <Experience></Experience>
-
-      <About></About>
-
-      <Table></Table>
-
-      <Footer></Footer>
+      {/* 3. Footer shobar jonno common thakbe */}
+      <Footer />
     </motion.main>
   );
 };

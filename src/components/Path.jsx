@@ -11,7 +11,7 @@ const Path = () => {
   const steps = [
     {
       id: "01",
-      title: "Problem Framing",
+      title: "Discover What Matters",
       description:
         "I start by getting to the heart of the problem. I explore users, business goals, existing experiences, and market context to understand what needs to be solved and why before making any design decisions.",
       bgColor: "bg-[#FBEBEA]",
@@ -19,25 +19,25 @@ const Path = () => {
     },
     {
       id: "02",
-      title: "Shaping the Idea",
+      title: "Find the Right Direction",
       description:
-        "Here, I refine initial ideas into clear concepts by aligning strategy and creativity. I develop structural directions that balance innovation with feasibility, while supporting both brand goals and user expectations.",
+        "With the right insights in place, I define the direction. I connect user needs with business objectives to create a clear strategy and structure for the experience that guides the design forward.",
       bgColor: "bg-[#DBF5F0]",
        image: process2,
     },
     {
       id: "03",
-      title: "Prototyping & Testing",
+      title: "Design & Validate",
       description:
-        "In this phase, I bring concepts to life through prototyping and real-world testing. I validate functionality, usability, and clarity by iterating on feedback, refining details, and resolving issues before final delivery.",
+        "I turn ideas into intuitive interfaces and interactive prototypes, then test and refine them through feedback. Every iteration helps make the experience clearer, easier, and more effective.",
       bgColor: "bg-[#FFE3FB]",
        image: process3,
     },
     {
       id: "(04)",
-      title: "Polishing the Outcome",
+      title: "Refine & Deliver",
       description:
-        "In the final stage of design, thorough attention is given to refine the product, ensuring it meets high standards of quality and functionality through testing, tweaking, and iteration to address any remaining issues.",
+        "I obsess over the details that make a product feel complete. From usability and visual consistency to responsive behavior, I refine, test, and prepare the final experience for real-world use.",
       bgColor: "bg-[#E3F2FF]",
        image: process4,
     },
@@ -79,10 +79,7 @@ const Path = () => {
               }}
               className="mt-[18px]  text-base leading-[160%] text-[#1d1d1d] md:text-[16px]"
             >
-              My working process revolves around an approach aimed at
-              maximizing productivity and creativity with clarity and focus.
-              It begins with thorough research and planning, where I gather
-              relevant information and outline key objectives.
+My process blends research, strategy, and creativity to turn complex ideas into clear, purposeful experiences. I start by understanding the problem, users, and goals before shaping solutions that are both meaningful and effective.
             </motion.p>
 
 <div className="inline-block border mt-[30px] rounded-[10px] border-[#1d1d1d]">

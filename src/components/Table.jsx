@@ -71,7 +71,7 @@ const Table = () => {
           }}
           className="text-[#1d1d1d] text-lg md:text-[22px] max-w-[912px] mx-auto font-[375] leading-[150%]"
         >
-         Strategy, creativity, and thoughtful design come together to create digital experiences that solve real problems and deliver lasting value.
+        Strategy, creativity, and thoughtful design come together to create digital experiences that solve real problems and deliver lasting value.
         </motion.p>
       </div>
 

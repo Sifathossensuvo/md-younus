@@ -108,9 +108,19 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-[#1D1D1D] font-[375] text-base md:text-lg leading-relaxed mb-5"
+            className="text-[#1D1D1D] font-[375] text-base md:text-lg leading-[160%] mb-5"
           >
-            I am Younus, a multidisciplinary designer and blogger based in the vibrant city of Los Angeles. With a keen eye for aesthetics and a knack for innovative solutions, I thrive in the dynamic intersection of design.
+            I’m Younus, a Senior UI/UX & Product Designer with 8+ years of experience crafting digital experiences that are purposeful, intuitive, and built around real user needs. From websites and mobile apps to SaaS platforms, dashboards, eCommerce experiences, and conversion-focused landing pages, I enjoy turning complex ideas into clear and engaging products.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-[#1D1D1D] text-base md:text-[17px] leading-[160%] mb-5"
+          >
+           My approach goes beyond making things look good. I dig into the problem, understand user behaviour and business goals, and use research, strategy, and thoughtful design decisions to create experiences that feel simple, useful, and natural to navigate.
           </motion.p>
 
           <motion.p 
@@ -120,8 +130,12 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-[#1D1D1D] text-base md:text-[17px] leading-[160%] mb-[60px]"
           >
-            My journey in this dynamic and ever-evolving field has been a testament to my unwavering passion for meticulously crafting meaningful user experiences, leveraging cutting-edge technologies, and fearlessly pushing the boundaries of digital creativity.
+          With a strong command of Figma, Adobe Creative Suite, HTML, CSS, and WordPress, I bridge the gap between design and execution. I’m passionate about solving meaningful problems, challenging the obvious, and creating digital experiences that deliver real value for both people and businesses.
           </motion.p>
+
+
+
+
 
           {/* Skills Grid (2 Columns Layout with 12 Skills matching the reference design) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[28px] gap-y-[28px] w-full">
