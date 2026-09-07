@@ -67,7 +67,7 @@ const Navbar = () => {
           <div className="hidden items-center gap-2 md:flex">
 <div className="border rounded-[10px] border-[#1d1d1d]">
   <a
-  href="https://www.facebook.com/rubel.monpura"
+  href="https://www.linkedin.com/in/rubelhossen26/"
   aria-label="X"
   target="_blank"
   className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
@@ -115,7 +115,7 @@ const Navbar = () => {
 
 <div className="border rounded-[10px] border-[#1d1d1d]">
   <a
-  href="https://www.linkedin.com/in/rubelhossen26/"
+  href="https://www.behance.net/rubelhossen"
   target="_blank"
   aria-label="X"
   className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
