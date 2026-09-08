@@ -64,7 +64,7 @@ const Banner = () => {
       ),
       icon: card2,
       btnBg: 'bg-[#FFE7A9]',
-      link: '/portfolio',
+      link: '#about',
     },
 
     {
