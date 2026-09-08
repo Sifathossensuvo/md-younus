@@ -1,92 +1,92 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
-
 // Project images (Tomar assets folder er path onujayi thik kore nio)
 import work1 from '../assets/projects-thumbnail/Thumbnail.png';
-import work2 from '../assets/projectcard.png';
-import work3 from '../assets/projectcard.png';
-import work4 from '../assets/projectcard.png';
-import work5 from '../assets/projectcard.png';
-import work6 from '../assets/projectcard.png';
-import work7 from '../assets/projectcard.png';
-import work8 from '../assets/projectcard.png';
+import work2 from '../assets/projects-thumbnail/Thumbnail-1.png';
+import work3 from '../assets/projects-thumbnail/Thumbnail-2.png';
+import work4 from '../assets/projects-thumbnail/Thumbnail-3.png';
+import work5 from '../assets/projects-thumbnail/Thumbnail-4.png';
+import work6 from '../assets/projects-thumbnail/Thumbnail-5.png';
+import work7 from '../assets/projects-thumbnail/Thumbnail-6.png';
+import work8 from '../assets/projects-thumbnail/Thumbnail-7.png';
 
 import arrow from '../assets/bannerarrow.svg'
 import { Link } from 'react-router-dom';
 
 const worksData = [
-  {
-    id: 1,
-    title: "Wren Kitchen - Website Design",
-    category: "ui/ux designer",
-    studio: "Edge Studio",
-    image: work1,
-    link: "#"
-  },
-  {
-    id: 2,
-    title: "Sandbox - Mobile App Interface",
-  category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work2,
-    link: "#"
-  },
-  {
-    id: 3,
-    title: "Blume - Photography Portfolio",
-    category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work3,
-    link: "#"
-  },
-  {
-    id: 4,
-    title: "Nutshell - Creative Agency",
-    category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work4,
-    link: "#"
-  },
-  {
-    id: 5,
-    title: "Aura - SaaS Landing Page",
-    category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work5,
-    link: "#"
-  },
-  {
-    id: 6,
-    title: "Vivid - E-Commerce Store",
-   category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work6,
-    link: "#"
-  },
-  {
-    id: 7,
-    title: "Nova - Crypto Dashboard",
-  category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work7,
-    link: "#"
-  },
-  {
-    id: 8,
-    title: "Zenith - Minimalist Blog",
-    category: "ui/ux designer",
-    studio: "Edge Studio",
-
-    image: work8,
-    link: "#"
-  }
+   {
+      id: 1,
+      title: "Wren Contracts - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work1,
+      liveLink: "https://www.wrencontracts.com/"
+    },
+    {
+      id: 1,
+      title: "Royston Glass - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work2,
+      liveLink: "https://roystonglass.co.uk/"
+    },
+    {
+      id: 1,
+      title: "University of Sheffield | EIC - Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work3,
+      liveLink: "https://eic.sheffield.ac.uk/"
+    },
+    {
+      id: 1,
+      title: "Becertain - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work4,
+      liveLink: "https://becertain.ai/"
+    },
+    {
+      id: 1,
+      title: "ArreoBlue - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work5,
+      liveLink: "https://www.arreoblue.com/"
+    },
+    {
+      id: 1,
+      title: "Hipco - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work6,
+      liveLink: "https://hipco.co.uk/"
+    },
+    {
+      id: 1,
+      title: "Medicine Drop - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work7,
+      liveLink: "https://medicinedrop.co.uk/"
+    },
+    {
+      id: 1,
+      title: "Tedbar Tools - Website Design",
+      category: "ui/ux designer",
+      studio: "Edge Studio",
+      studioLink: "https://edge.studio/",
+      image: work8,
+      liveLink: "https://tedbartools.co.uk/"
+    },
 ];
 
 const Works = () => {
@@ -455,131 +455,141 @@ const AnimatedProjectCard = ({ work, index }) => {
       {/* =====================================================
           CONTENT AREA
       ===================================================== */}
+<div className="flex flex-col items-start text-left px-3">
 
-      <div className="flex flex-col items-start text-left px-3">
+  {/* CATEGORY */}
 
-        {/* CATEGORY */}
-
-<div className='flex'>
-          <span
-          className="
-            text-[10px]
-            md:text-[12px]
-            font-[475]
-            mt-10
-            mr-3
-            text-[#1d1d1d]
-            flex
-            items-center
-            
-            h-[25px]
-            bg-[#FFE3FB]
-            px-[10px]
-           
-            rounded-[6px]
-            mb-[16px]
-            uppercase
-          "
-        >
-<span className='text-[10px]
-            md:text-[12px]
-            font-[475]    
-            text-gray-500 mr-1 uppercase'>Role:
-             </span>
-
-          {work.category}
+  <div className='md:flex '>
+    <span
+      className="
+        text-[10px]
+        md:text-[12px]
+        font-[475]
+        mt-10
+        mr-3
+        text-[#1d1d1d]
+        flex
+        items-center
         
+        h-[25px]
+        bg-[#FFE3FB]
+        px-[10px]
+       
+        rounded-[6px]
+        mb-[16px]
+        uppercase
+      "
+    >
+      <span className='text-[10px]
+        md:text-[12px]
+        font-[475]    
+        text-gray-500 md:mr-1 uppercase'>
+        Role:
+      </span>
+
+      {work.category}
+
+    </span>
+
+
+    <a
+      href={work.studioLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contents cursor-pointer"
+    >
+      <span
+        className="
+          text-[10px]
+          md:text-[12px]
+          font-[475]
+          sm:mt-[1px]
+          md:mt-10
+          
+          
+          text-[#1d1d1d]
+          flex
+          items-center
+          
+          h-[25px]
+          bg-[#DBF5F0]
+          px-[10px]
+         
+          rounded-[6px]
+          mb-[16px]
+          uppercase
+        "
+      >
+        <span className='text-[10px]
+          md:text-[12px]
+          font-[475]    
+          text-gray-500 mr-1 uppercase'>
+          Worked through:
+
         </span>
 
-        
-          <span
-          className="
-            text-[10px]
-            md:text-[12px]
-            font-[475]
-            mt-10
-            
-            text-[#1d1d1d]
-            flex
-            items-center
-            
-            h-[25px]
-            bg-[#DBF5F0]
-            px-[10px]
-           
-            rounded-[6px]
-            mb-[16px]
-            uppercase
-          "
-        >
-<span className='text-[10px]
-            md:text-[12px]
-            font-[475]    
-            text-gray-500 mr-1 uppercase'>
-Worked through:
+        {work.studio}
 
-             </span>
+      </span>
+    </a>
 
-          {work.studio}
-        
-        </span>
+  </div>
 
 
+  {/* TITLE */}
 
-</div>
-
-
-        {/* TITLE */}
-
-        <h3
-          className="
-            text-3xl
-            md:text-[24px]
-            font-medium
-            text-[#1D1D1D]
-            tracking-[-1]
-            mb-[18px]
-            leading-[39px]
-          "
-        >
-          {work.title}
-        </h3>
-
-
-        {/* LIVE SITE BUTTON */}
-
-<div className="border rounded-[10px] border-[#1d1d1d]">
-    <button
-    onClick={() => alert('Downloading Resume...')}
+  <h3
     className="
-      flex items-center gap-5 
-      px-6 h-[48px] 
-      bg-white text-[#1d1d1d]
-      font-medium text-base 
-      rounded-[10px]
-      border-b-5 border-[#ddd]
-      
-      text-[14px]
-      
-tracking-[-0.3]
-      
-      
-      active:scale-95
-      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
-      transition-all duration-200 ease-in-out
-      cursor-pointer
-      outline-none
-
-      hover:bg-[#FFE3FB]
+      text-[22px]
+      md:text-[24px]
+      leading-[120%]
+      font-medium
+      text-[#1D1D1D]
+      tracking-[-1]
+      mb-[18px]
+     
     "
   >
-    <span>Live site</span>
-    {/* dasdfsadfasfsa */}
-<img src={arrow} alt="" ></img>
-  </button>
-</div>
+    {work.title}
+  </h3>
 
-      </div>
+
+  {/* LIVE SITE BUTTON */}
+
+  <div className="border rounded-[10px] border-[#1d1d1d]">
+    <a
+      href={work.liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        flex items-center gap-5 
+        px-6 h-[48px] 
+        bg-white text-[#1d1d1d]
+        font-medium text-base 
+        rounded-[10px]
+        border-b-5 border-[#ddd]
+        
+        text-[14px]
+        
+        tracking-[-0.3]
+        
+        
+        active:scale-95
+        active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+        transition-all duration-200 ease-in-out
+        cursor-pointer
+        outline-none
+
+        hover:bg-[#FFE3FB]
+      "
+    >
+      <span>Live site</span>
+      {/* dasdfsadfasfsa */}
+      <img src={arrow} alt=""></img>
+    </a>
+  </div>
+
+</div>
 
     </motion.div>
 

@@ -2,14 +2,47 @@ import ProjectsBanner from "./ProjectsBanner";
 import { motion } from "framer-motion";
 
 // Project images (Tomar assets folder er path onujayi thik kore nio)
-import work1 from '../assets/projectcard.png';
-import work2 from '../assets/projectcard.png';
-import work3 from '../assets/projectcard.png';
-import work4 from '../assets/projectcard.png';
-import work5 from '../assets/projectcard.png';
-import work6 from '../assets/projectcard.png';
-import work7 from '../assets/projectcard.png';
-import work8 from '../assets/projectcard.png';
+import work1 from '../assets/projects-thumbnail/Thumbnail.png';
+import work2 from '../assets/projects-thumbnail/Thumbnail-1.png';
+import work3 from '../assets/projects-thumbnail/Thumbnail-2.png';
+import work4 from '../assets/projects-thumbnail/Thumbnail-3.png';
+import work5 from '../assets/projects-thumbnail/Thumbnail-4.png';
+import work6 from '../assets/projects-thumbnail/Thumbnail-5.png';
+import work7 from '../assets/projects-thumbnail/Thumbnail-6.png';
+import work8 from '../assets/projects-thumbnail/Thumbnail-7.png';
+import work9 from '../assets/projects-thumbnail/Thumbnail-8.png';
+import work10 from '../assets/projects-thumbnail/Thumbnail-9.png';
+import work11 from '../assets/projects-thumbnail/Thumbnail-10.png';
+import work12 from '../assets/projects-thumbnail/Thumbnail-11.png';
+import work13 from '../assets/projects-thumbnail/Thumbnail-12.png';
+import work14 from '../assets/projects-thumbnail/Thumbnail-13.png';
+import work15 from '../assets/projects-thumbnail/Thumbnail-14.png';
+import work16 from '../assets/projects-thumbnail/Thumbnail-15.png';
+import work17 from '../assets/projects-thumbnail/Thumbnail-16.png';
+import work18 from '../assets/projects-thumbnail/Thumbnail-17.png';
+import work19 from '../assets/projects-thumbnail/Thumbnail-18.png';
+import work20 from '../assets/projects-thumbnail/Thumbnail-19.png';
+import work21 from '../assets/projects-thumbnail/Thumbnail-20.png';
+import work22 from '../assets/projects-thumbnail/Thumbnail-21.png';
+import work23 from '../assets/projects-thumbnail/Thumbnail-22.png';
+import work24 from '../assets/projects-thumbnail/Thumbnail-23.png';
+import work25 from '../assets/projects-thumbnail/Thumbnail-24.png';
+import work26 from '../assets/projects-thumbnail/Thumbnail-25.png';
+import work27 from '../assets/projects-thumbnail/Thumbnail-26.png';
+import work28 from '../assets/projects-thumbnail/Thumbnail-27.png';
+import work29 from '../assets/projects-thumbnail/Thumbnail-28.png';
+import work30 from '../assets/projects-thumbnail/Thumbnail-29.png';
+import work31 from '../assets/projects-thumbnail/Thumbnail-30.png';
+import work32 from '../assets/projects-thumbnail/Thumbnail-31.png';
+import work33 from '../assets/projects-thumbnail/Thumbnail-32.png';
+import work34 from '../assets/projects-thumbnail/Thumbnail-33.png';
+import work35 from '../assets/projects-thumbnail/Thumbnail-34.png';
+import work36 from '../assets/projects-thumbnail/Thumbnail-35.png';
+import work37 from '../assets/projects-thumbnail/Thumbnail-36.png';
+import work38 from '../assets/projects-thumbnail/Thumbnail-37.png';
+import work39 from '../assets/projects-thumbnail/Thumbnail-38.png';
+import work40 from '../assets/projects-thumbnail/Thumbnail-39.png';
+
 
 import arrow from '../assets/bannerarrow.svg'
 import { useRef, useState } from "react";
@@ -18,116 +51,365 @@ import { useScroll, useSpring, useTransform } from "framer-motion";
 const allWorksData = [
   {
     id: 1,
-    title: "Wren Kitchen - Website Design",
-    category: "BRAND DESIGN, FRAMER",
+    title: "Wren Contracts - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work1,
-    link: "#"
+    liveLink: "https://www.wrencontracts.com/"
   },
   {
-    id: 2,
-    title: "Sandbox - Mobile App Interface",
-    category: "UI/UX, MOBILE DESIGN",
+    id: 1,
+    title: "Royston Glass - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work2,
-    link: "#"
+    liveLink: "https://roystonglass.co.uk/"
   },
   {
-    id: 3,
-    title: "Blume - Photography Portfolio",
-    category: "WEB DESIGN, TYPOGRAPHY",
+    id: 1,
+    title: "University of Sheffield | EIC - Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work3,
-    link: "#"
+    liveLink: "https://eic.sheffield.ac.uk/"
   },
   {
-    id: 4,
-    title: "Nutshell - Creative Agency",
-    category: "WORDPRESS, DEVELOPMENT",
+    id: 1,
+    title: "Becertain - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work4,
-    link: "#"
+    liveLink: "https://becertain.ai/"
   },
   {
-    id: 5,
-    title: "Aura - SaaS Landing Page",
-    category: "FRAMER, SAAS",
+    id: 1,
+    title: "ArreoBlue - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work5,
-    link: "#"
+    liveLink: "https://www.arreoblue.com/"
   },
   {
-    id: 6,
-    title: "Vivid - E-Commerce Store",
-    category: "WEBFLOW, E-COMMERCE",
+    id: 1,
+    title: "Hipco - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work6,
-    link: "#"
+    liveLink: "https://hipco.co.uk/"
   },
   {
-    id: 7,
-    title: "Nova - Crypto Dashboard",
-    category: "UI/UX, WEB APP",
+    id: 1,
+    title: "Medicine Drop - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work7,
-    link: "#"
+    liveLink: "https://medicinedrop.co.uk/"
   },
   {
-    id: 8,
-    title: "Zenith - Minimalist Blog",
-    category: "DESIGN SYSTEM",
+    id: 1,
+    title: "Tedbar Tools - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work8,
-    link: "#"
+    liveLink: "https://tedbartools.co.uk/"
   },
   {
-    id: 9,
-    title: "Apex - Dashboard UI",
-    category: "DASHBOARD, UI/UX",
-    image: work1,
-    link: "#"
+    id: 1,
+    title: "Westpack - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
+    image: work9,
+    liveLink: "https://westpack.co.uk/"
   },
   {
-    id: 10,
-    title: "Pulse - Health App",
-    category: "MOBILE APP, HEALTH",
-    image: work2,
-    link: "#"
+    id: 1,
+    title: "Playinltd - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
+    image: work10,
+    liveLink: "https://playinltd.com/"
   },
   {
-    id: 11,
-    title: "Orbit - Agency Website",
-    category: "WEB DESIGN",
-    image: work3,
-    link: "#"
+    id: 1,
+    title: "S.P. Fields - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
+    image: work11,
+    liveLink: "https://spfields.co.uk/"
   },
   {
-    id: 12,
-    title: "Nexus - Cloud Platform",
-    category: "SAAS, DEVELOPMENT",
-    image: work4,
-    link: "#"
+    id: 1,
+    title: "Furd - Website Design",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
+    image: work12,
+    liveLink: "https://furd.org/"
   },
   {
-    id: 13,
-    title: "Echo - Social Media App",
-    category: "MOBILE DESIGN",
-    image: work5,
-    link: "#"
+    id: 1,
+    title: "ShopLentor - WordPress Plugin",
+    category: "ui/ux designer",
+    studio: "Hastech",
+    studioLink: "https://hastechit.com/",
+    image: work13,
+    liveLink: "https://woolentor.com/"
   },
   {
-    id: 14,
-    title: "Vortex - Gaming Portal",
-    category: "WEBFLOW, GAMING",
-    image: work6,
-    link: "#"
+    id: 1,
+    title: "HT Mega - WordPress Plugin",
+    category: "ui/ux designer",
+    studio: "Hastech",
+    studioLink: "https://hastechit.com/",
+    image: work14,
+    liveLink: "https://wphtmega.com/"
   },
   {
-    id: 15,
-    title: "Zen - Meditation App",
-    category: "UI/UX",
-    image: work7,
-    link: "#"
+    id: 1,
+    title: "Waffle and More - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work15,
+    liveLink: "https://waffleandmore.com/"
   },
   {
-    id: 16,
-    title: "Titan - Portfolio",
-    category: "BRAND DESIGN",
-    image: work8,
-    link: "#"
-  }
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work16,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work17,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work18,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work19,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work20,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work21,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work22,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work23,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work24,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work25,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work26,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work27,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work28,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work29,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work30,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work31,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work32,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work33,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work34,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work35,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work36,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work37,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work38,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work39,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+  {
+    id: 1,
+    title: "Vistafolia - Website Design",
+    category: "ui/ux designer",
+    studio: "Kamg",
+    studioLink: "https://kasandz.com/",
+    image: work40,
+    liveLink: "https://vistafolia.com/gb/"
+  },
+ 
 ];
 
 
@@ -384,15 +666,11 @@ const AnimatedProjectCard = ({ work, index }) => {
         
         group
         will-change-transform
-
-        max-sm:p-4
-        max-sm:pb-6
-        max-sm:rounded-[18px]
       "
     >
 
       {/* =====================================================
-         INNER IMAGE BOX
+          INNER IMAGE BOX
       ===================================================== */}
 
       <div
@@ -408,8 +686,6 @@ const AnimatedProjectCard = ({ work, index }) => {
           items-center
           justify-center
           overflow-hidden
-
-          max-sm:rounded-[14px]
           
         "
       >
@@ -441,108 +717,146 @@ const AnimatedProjectCard = ({ work, index }) => {
 
 
       {/* =====================================================
-         CONTENT AREA
+          CONTENT AREA
       ===================================================== */}
+<div className="flex flex-col items-start text-left px-3">
 
-      <div className="flex flex-col items-start text-left px-3 max-sm:px-2">
+  {/* CATEGORY */}
 
-        {/* CATEGORY */}
+  <div className='flex'>
+    <span
+      className="
+        text-[10px]
+        md:text-[12px]
+        font-[475]
+        mt-10
+        mr-3
+        text-[#1d1d1d]
+        flex
+        items-center
+        
+        h-[25px]
+        bg-[#FFE3FB]
+        px-[10px]
+       
+        rounded-[6px]
+        mb-[16px]
+        uppercase
+      "
+    >
+      <span className='text-[10px]
+        md:text-[12px]
+        font-[475]    
+        text-gray-500 mr-1 uppercase'>
+        Role:
+      </span>
 
-        <span
-          className="
-            text-[10px]
-            md:text-[12px]
-            font-[475]
-            mt-10
-            
-            text-[#1d1d1d]
-            flex
-            items-center
-            
-            h-[25px]
-            bg-[#FFE3FB]
-            px-[10px]
-           
-            rounded-[6px]
-            mb-[16px]
+      {work.category}
 
-            max-sm:mt-6
-            max-sm:h-[24px]
-            max-sm:px-2
-            max-sm:text-[9px]
-            max-sm:mb-3
-          "
-        >
-          {work.category}
+    </span>
+
+
+    <a
+      href={work.studioLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contents cursor-pointer"
+    >
+      <span
+        className="
+          text-[10px]
+          md:text-[12px]
+          font-[475]
+          mt-10
+          
+          text-[#1d1d1d]
+          flex
+          items-center
+          
+          h-[25px]
+          bg-[#DBF5F0]
+          px-[10px]
+         
+          rounded-[6px]
+          mb-[16px]
+          uppercase
+        "
+      >
+        <span className='text-[10px]
+          md:text-[12px]
+          font-[475]    
+          text-gray-500 mr-1 uppercase'>
+          Worked through:
+
         </span>
 
+        {work.studio}
 
-        {/* TITLE */}
+      </span>
+    </a>
 
-        <h3
-          className="
-            text-3xl
-            md:text-[24px]
-            font-medium
-            text-[#1D1D1D]
-            tracking-[-1]
-            mb-[18px]
-            leading-[39px]
-
-            max-sm:text-[23px]
-            max-sm:leading-[130%]
-            max-sm:tracking-[-0.6px]
-            max-sm:mb-4
-          "
-        >
-          {work.title}
-        </h3>
+  </div>
 
 
-        {/* LIVE SITE BUTTON */}
+  {/* TITLE */}
 
-<div className="border rounded-[10px] border-[#1d1d1d]">
-    <button
-    onClick={() => alert('Downloading Resume...')}
+  <h3
     className="
-      flex items-center gap-5 
-      px-6 h-[48px] 
-      bg-white text-[#1d1d1d]
-      font-medium text-base 
-      rounded-[10px]
-      border-b-5 border-[#ddd]
-      
-      text-[14px]
-      
-tracking-[-0.3]
-      
-      
-      active:scale-95
-      active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
-      transition-all duration-200 ease-in-out
-      cursor-pointer
-      outline-none
-
-      hover:bg-[#FFE3FB]
-
-      max-sm:h-[45px]
-      max-sm:px-5
-      max-sm:gap-4
-      max-sm:text-[13px]
+      text-3xl
+      md:text-[24px]
+      font-medium
+      text-[#1D1D1D]
+      tracking-[-1]
+      mb-[18px]
+      leading-[39px]
     "
   >
-    <span>Live site</span>
-    {/* dasdfsadfasfsa */}
-<img src={arrow} alt="" ></img>
-  </button>
-</div>
+    {work.title}
+  </h3>
 
-      </div>
+
+  {/* LIVE SITE BUTTON */}
+
+  <div className="border rounded-[10px] border-[#1d1d1d]">
+    <a
+      href={work.liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        flex items-center gap-5 
+        px-6 h-[48px] 
+        bg-white text-[#1d1d1d]
+        font-medium text-base 
+        rounded-[10px]
+        border-b-5 border-[#ddd]
+        
+        text-[14px]
+        
+        tracking-[-0.3]
+        
+        
+        active:scale-95
+        active:shadow-[inset_0_-2px_4px_rgba(29,29,29,0.15)]
+        transition-all duration-200 ease-in-out
+        cursor-pointer
+        outline-none
+
+        hover:bg-[#FFE3FB]
+      "
+    >
+      <span>Live site</span>
+      {/* dasdfsadfasfsa */}
+      <img src={arrow} alt=""></img>
+    </a>
+  </div>
+
+</div>
 
     </motion.div>
 
   );
 };
+
 
 
 

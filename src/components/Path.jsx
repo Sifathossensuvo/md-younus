@@ -64,7 +64,7 @@ const Path = () => {
             >
 
               <h2 className="text-4xl font-medium leading-[120%] tracking-[-2px] text-[#1A1A1A] sm:text-5xl md:text-[48px] lg:text-[48px] max-sm:text-[34px] max-sm:leading-[118%] max-sm:tracking-[-1.5px]">
-                High-quality work with real value considered.
+                High-quality work with real value in mind.
               </h2>
             </motion.div>
 
@@ -249,7 +249,7 @@ const Path = () => {
                           delay: 0.35 + index * 0.08,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="text-[22px] font-medium tracking-[-0.38] text-[#1A1A1A] sm:text-3xl max-sm:text-[21px] max-sm:leading-[125%]"
+                        className="md:text-[22px] font-medium tracking-[-0.38] text-[#1A1A1A] sm:text-3xl max-sm:text-[21px] max-sm:leading-[125%]"
                       >
                         {step.title}
                       </motion.h3>

@@ -8,7 +8,7 @@ import download from '../assets/download.svg';
 import uiuxSvg from '../assets/uiux.svg';
 import penToolSvg from '../assets/pentool.svg';
 import drinkSvg from '../assets/drink.svg';
-import nocodeSvg from '../assets/nocode.svg';
+import nocodeSvg from '../assets/table-icons/product.svg';
 import arrow from '../assets/bannerarrow.svg';
 
 // Profile pictures for animation
