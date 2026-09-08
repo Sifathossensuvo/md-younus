@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 
 // Project images (Tomar assets folder er path onujayi thik kore nio)
-import work1 from '../assets/projectcard.png';
+import work1 from '../assets/projects-thumbnail/Thumbnail.png';
 import work2 from '../assets/projectcard.png';
 import work3 from '../assets/projectcard.png';
 import work4 from '../assets/projectcard.png';
@@ -19,56 +19,71 @@ const worksData = [
   {
     id: 1,
     title: "Wren Kitchen - Website Design",
-    category: "BRAND DESIGN, FRAMER",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
     image: work1,
     link: "#"
   },
   {
     id: 2,
     title: "Sandbox - Mobile App Interface",
-    category: "UI/UX, MOBILE DESIGN",
+  category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work2,
     link: "#"
   },
   {
     id: 3,
     title: "Blume - Photography Portfolio",
-    category: "WEB DESIGN, TYPOGRAPHY",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work3,
     link: "#"
   },
   {
     id: 4,
     title: "Nutshell - Creative Agency",
-    category: "WORDPRESS, DEVELOPMENT",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work4,
     link: "#"
   },
   {
     id: 5,
     title: "Aura - SaaS Landing Page",
-    category: "FRAMER, SAAS",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work5,
     link: "#"
   },
   {
     id: 6,
     title: "Vivid - E-Commerce Store",
-    category: "WEBFLOW, E-COMMERCE",
+   category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work6,
     link: "#"
   },
   {
     id: 7,
     title: "Nova - Crypto Dashboard",
-    category: "UI/UX, WEB APP",
+  category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work7,
     link: "#"
   },
   {
     id: 8,
     title: "Zenith - Minimalist Blog",
-    category: "DESIGN SYSTEM",
+    category: "ui/ux designer",
+    studio: "Edge Studio",
+
     image: work8,
     link: "#"
   }
@@ -445,7 +460,39 @@ const AnimatedProjectCard = ({ work, index }) => {
 
         {/* CATEGORY */}
 
-        <span
+<div className='flex'>
+          <span
+          className="
+            text-[10px]
+            md:text-[12px]
+            font-[475]
+            mt-10
+            mr-3
+            text-[#1d1d1d]
+            flex
+            items-center
+            
+            h-[25px]
+            bg-[#FFE3FB]
+            px-[10px]
+           
+            rounded-[6px]
+            mb-[16px]
+            uppercase
+          "
+        >
+<span className='text-[10px]
+            md:text-[12px]
+            font-[475]    
+            text-gray-500 mr-1 uppercase'>Role:
+             </span>
+
+          {work.category}
+        
+        </span>
+
+        
+          <span
           className="
             text-[10px]
             md:text-[12px]
@@ -457,15 +504,29 @@ const AnimatedProjectCard = ({ work, index }) => {
             items-center
             
             h-[25px]
-            bg-[#FFE3FB]
+            bg-[#DBF5F0]
             px-[10px]
            
             rounded-[6px]
             mb-[16px]
+            uppercase
           "
         >
-          {work.category}
+<span className='text-[10px]
+            md:text-[12px]
+            font-[475]    
+            text-gray-500 mr-1 uppercase'>
+Worked through:
+
+             </span>
+
+          {work.studio}
+        
         </span>
+
+
+
+</div>
 
 
         {/* TITLE */}

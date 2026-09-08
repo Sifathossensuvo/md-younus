@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight, FiGlobe, FiClipboard, FiMail } from 'react-icons/fi';
 import download from '../assets/download.svg';
 
-
 // Tomar SVG assets
 import uiuxSvg from '../assets/uiux.svg';
 import penToolSvg from '../assets/pentool.svg';
