@@ -23,11 +23,11 @@ const Contact = () => {
 
     try {
 await emailjs.sendForm(
-  'service_3kds64b',
-  'template_ionj5rf',
+  'service_a3cn27e',
+  'template_rtd1bqb',
   form.current,
   {
-    publicKey: 'Op7o9-NdKcQNcFuK8',
+    publicKey: 'IzJPSJPsCRjsCeeHX',
   }
 );
 
