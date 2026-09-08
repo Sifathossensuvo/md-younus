@@ -896,7 +896,7 @@ const Banner = () => {
                     justify-center
                     border
                     border-[#1d1d1d]
-                    bg-[#eef3f9]
+                    
                     transition-all
                     duration-200
                     ease-in-out
