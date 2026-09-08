@@ -46,8 +46,8 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="w-full px-[30px] pt-5 h-[76px]">
-        <div className="relative z-50 mx-auto flex max-w-[1200px] items-center justify-between rounded-[20px] border-1 border-[#1D1D1D] bg-white px-[30px] py-[15px] sm:px-5">
+      <nav className="w-full px-[15px] md:px-[30px] pt-5 h-[76px]">
+        <div className="relative z-50 mx-auto flex max-w-[1200px] items-center justify-between rounded-[20px] border-1 border-[#1D1D1D] bg-white px-[15px] md:px-[30px] py-[15px] ">
 
           {/* Logo */}
 <Link to="/"><img src={logo} href="#home"

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
@@ -8,6 +9,7 @@ import quoteIcon from '../assets/quote-icon.svg';
 import user1 from '../assets/user1.png';
 import user2 from '../assets/user2.png';
 import user3 from '../assets/user3.png';
+
 
 const Review = () => {
   // Reviews Data Array (3 ti user-er review)
@@ -38,21 +40,10 @@ const Review = () => {
     },
   ];
 
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
 
-  // Infinity Auto-play
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDirection(1);
-
-      setCurrentIndex((prevIndex) => {
-        return (prevIndex + 1) % reviews.length;
-      });
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, [reviews.length]);
 
   const handlePrev = () => {
     setDirection(-1);
@@ -141,7 +132,7 @@ const Review = () => {
             duration: 0.7,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mb-8 max-sm:mb-6"
+          className="mb-8 max-sm:mb-0"
         >
           <motion.img
             src={quoteIcon}
@@ -163,7 +154,7 @@ const Review = () => {
             MAIN REVIEW TEXT
         ===================================================== */}
 
-        <div className="relative min-h-[140px] md:min-h-[120px] flex items-center justify-center mb-[25px] w-full px-6 md:px-12 max-sm:min-h-[250px] max-sm:px-8 max-sm:mb-[20px]">
+        <div className="relative min-h-[140px] md:min-h-[120px] flex items-center justify-center mb-[25px] w-full px-6 md:px-12 max-sm:min-h-[250px] max-sm:px-8 max-sm:mb-[1px]">
 
           <AnimatePresence
             mode="wait"
@@ -484,3 +475,4 @@ const Review = () => {
 };
 
 export default Review;
+

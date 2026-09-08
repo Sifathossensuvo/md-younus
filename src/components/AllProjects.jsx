@@ -503,6 +503,7 @@ tracking-[-0.3]
 };
 
 
+
 /* ===============================================================
    ANIMATED PROJECT CARD
 
@@ -723,7 +724,7 @@ const AnimatedProjectCard = ({ work, index }) => {
 
   {/* CATEGORY */}
 
-  <div className='flex'>
+  <div className='md:flex '>
     <span
       className="
         text-[10px]
@@ -747,7 +748,7 @@ const AnimatedProjectCard = ({ work, index }) => {
       <span className='text-[10px]
         md:text-[12px]
         font-[475]    
-        text-gray-500 mr-1 uppercase'>
+        text-gray-500 md:mr-1 uppercase'>
         Role:
       </span>
 
@@ -767,7 +768,9 @@ const AnimatedProjectCard = ({ work, index }) => {
           text-[10px]
           md:text-[12px]
           font-[475]
-          mt-10
+          sm:mt-[1px]
+          md:mt-10
+          
           
           text-[#1d1d1d]
           flex
@@ -802,13 +805,14 @@ const AnimatedProjectCard = ({ work, index }) => {
 
   <h3
     className="
-      text-3xl
+      text-[22px]
       md:text-[24px]
+      leading-[120%]
       font-medium
       text-[#1D1D1D]
       tracking-[-1]
       mb-[18px]
-      leading-[39px]
+     
     "
   >
     {work.title}
@@ -856,7 +860,6 @@ const AnimatedProjectCard = ({ work, index }) => {
 
   );
 };
-
 
 
 
