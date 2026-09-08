@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   FaXTwitter,
@@ -58,7 +57,12 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden items-center gap-20 md:flex text-[#1D1D1D]">
             <Link to="/"><MenuItem item="Home"/></Link>
-          <MenuItem item="About" href="#about" />
+
+            <MenuItem
+              item="About"
+              href="/#about"
+            />
+
             <Link to="/portfolio"><MenuItem item="Portfolio" /></Link>
             <Link to="/contact"><MenuItem item="Contact"/></Link>
           </div>
@@ -188,7 +192,7 @@ const Navbar = () => {
 
   <MenuItem
     item="About"
-    href="#about"
+    href="/#about"
     mobile
     onClick={closeMenu}
   />

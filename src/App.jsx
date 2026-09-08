@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Lenis from "lenis";
@@ -56,13 +55,41 @@ const App = () => {
   }, []);
 
   // Proti bar route change hole 100% reliable vabe top-e niye jabe
+  // Ar /#about hole About section-e smooth vabe niye jabe
   useEffect(() => {
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [location.pathname]);
+    const scrollToTarget = () => {
+      if (location.hash === "#about") {
+        const aboutSection = document.getElementById("about");
+
+        if (aboutSection) {
+          if (window.lenis) {
+            window.lenis.scrollTo(aboutSection, {
+              duration: 1.35,
+            });
+          } else {
+            aboutSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+
+          return;
+        }
+      }
+
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    const timer = setTimeout(() => {
+      scrollToTarget();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname, location.hash]);
 
   return (
     <motion.main

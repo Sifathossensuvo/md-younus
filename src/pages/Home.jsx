@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import Banner from "../components/Banner";
 import Works from "../components/Works";
 import Review from "../components/Review";
@@ -15,7 +14,11 @@ const Home = () => {
       <Review />
       <Path />
       <Experience />
-      <About />
+
+      <div id="about">
+        <About />
+      </div>
+
       <Table />
     </div>
   );
