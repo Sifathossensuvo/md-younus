@@ -26,12 +26,14 @@ const App = () => {
 
   // Lenis smooth scroll setup
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
     const lenis = new Lenis({
       duration: 1.35,
       smoothWheel: true,
       wheelMultiplier: 0.75,
-      touchMultiplier: 1,
-      syncTouch: true,
+      touchMultiplier: isMobile ? 1.25 : 1,
+      syncTouch: isMobile ? false : true,
       gestureOrientation: "vertical",
       easing: (t) => 1 - Math.pow(1 - t, 4),
     });

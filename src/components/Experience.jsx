@@ -109,7 +109,7 @@ const Experience = () => {
           max-sm:w-[250px]
           max-sm:h-[250px]
           max-sm:-top-20
-          max-sm:-left-20
+          max-sm:-left-10
         "
       />
 
@@ -137,7 +137,7 @@ const Experience = () => {
           max-sm:w-[280px]
           max-sm:h-[280px]
           max-sm:-bottom-24
-          max-sm:-right-24
+          max-sm:-right-10
         "
       />
 

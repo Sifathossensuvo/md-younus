@@ -156,8 +156,8 @@ const AllProjects = () => {
           <ProjectsBanner></ProjectsBanner>
           {/* projects */}
 
-          <section className="mt-[160px] mb-[160px]">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-[50px]">
+          <section className="mt-[160px] mb-[160px] max-sm:mt-[90px] max-sm:mb-[90px] max-sm:px-4">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-[50px] max-sm:gap-6">
 
         {worksData.map((work, index) => (
 
@@ -172,7 +172,7 @@ const AllProjects = () => {
       </div>
 
 
-<div className="flex justify-center mt-[90px]">
+<div className="flex justify-center mt-[90px] max-sm:mt-[50px]">
     <div className="inline-block border  rounded-[10px] border-[#1d1d1d]">
     <button
     onClick={handleLoadMore}
@@ -198,6 +198,11 @@ tracking-[-0.3]
       outline-none
 
       hover:bg-[#FFE3FB]
+
+      max-sm:w-[160px]
+      max-sm:h-[50px]
+      max-sm:px-4
+      max-sm:text-[13px]
     "
   >
     {loading ? (
@@ -379,6 +384,10 @@ const AnimatedProjectCard = ({ work, index }) => {
         
         group
         will-change-transform
+
+        max-sm:p-4
+        max-sm:pb-6
+        max-sm:rounded-[18px]
       "
     >
 
@@ -399,6 +408,8 @@ const AnimatedProjectCard = ({ work, index }) => {
           items-center
           justify-center
           overflow-hidden
+
+          max-sm:rounded-[14px]
           
         "
       >
@@ -433,7 +444,7 @@ const AnimatedProjectCard = ({ work, index }) => {
          CONTENT AREA
       ===================================================== */}
 
-      <div className="flex flex-col items-start text-left px-3">
+      <div className="flex flex-col items-start text-left px-3 max-sm:px-2">
 
         {/* CATEGORY */}
 
@@ -454,6 +465,12 @@ const AnimatedProjectCard = ({ work, index }) => {
            
             rounded-[6px]
             mb-[16px]
+
+            max-sm:mt-6
+            max-sm:h-[24px]
+            max-sm:px-2
+            max-sm:text-[9px]
+            max-sm:mb-3
           "
         >
           {work.category}
@@ -471,6 +488,11 @@ const AnimatedProjectCard = ({ work, index }) => {
             tracking-[-1]
             mb-[18px]
             leading-[39px]
+
+            max-sm:text-[23px]
+            max-sm:leading-[130%]
+            max-sm:tracking-[-0.6px]
+            max-sm:mb-4
           "
         >
           {work.title}
@@ -502,6 +524,11 @@ tracking-[-0.3]
       outline-none
 
       hover:bg-[#FFE3FB]
+
+      max-sm:h-[45px]
+      max-sm:px-5
+      max-sm:gap-4
+      max-sm:text-[13px]
     "
   >
     <span>Live site</span>

@@ -167,7 +167,7 @@ tracking-[-0.3]
               delay: 0.5,
               ease: [0.22, 1, 0.36, 1]
             }}
-            className=" w-[125.68px] h-[102.09]  ml-140 mb-[120px] max-sm:w-[85px] max-sm:h-[70px] max-sm:ml-[140px] max-sm:mb-[75px]"
+            className=" w-[125.68px] h-[102.09]  ml-140 mb-[120px] max-sm:w-[85px] max-sm:h-[70px] max-sm:ml-0 max-sm:mb-[75px]"
           >
             {/* Pure White Arrow pointing directly to the button */}
           <motion.img  
@@ -191,7 +191,7 @@ tracking-[-0.3]
             animate={{
               y: [0, -4, 0]
             }}
-            className="scale-x-100 w-[500px] rotate-[-12deg] filter invert brightness-0 opacity-100 ml-4 w-full max-sm:ml-30"  
+            className="scale-x-100 w-[500px] rotate-[-12deg] max-sm:rotate-[0deg] filter invert brightness-0 opacity-100 ml-4 w-full max-sm:ml-30 max-sm:mt-10"  
           />
             
             {/* Ultra-stylish Cursive/Handwritten Text */}

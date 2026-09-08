@@ -64,7 +64,7 @@ const Banner = () => {
         </>
       ),
       icon: card2,
-      btnBg: 'bg-yellow-100',
+      btnBg: 'bg-[#FFE7A9]',
       link: '/portfolio',
     },
 
@@ -79,7 +79,7 @@ const Banner = () => {
         </>
       ),
       icon: card3,
-      btnBg: 'bg-[#E3F2FF]',
+      btnBg: 'bg-[#DBF5F0]',
       link: '/contact',
     },
   ];
@@ -512,7 +512,7 @@ const Banner = () => {
                         object-cover
 
                         bg-pink-200
-                        border-2
+                        border-1
                         border-[#1D1D1D]
                       "
                     />
@@ -807,7 +807,7 @@ const Banner = () => {
                       justify-center
                       border
                       border-[#1d1d1d]
-                      bg-[#eef3f9]
+                      
                       transition-all
                       duration-200
                       ease-in-out

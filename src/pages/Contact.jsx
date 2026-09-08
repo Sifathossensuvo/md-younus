@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -46,32 +45,89 @@ await emailjs.sendForm(
   return (
     <div className="w-full bg-white">
 
-      {/* 1. Uporer Purple Banner Section */}
-      <div className="w-full pt-[140px] bg-[#E3E3FF] pb-[420px] relative overflow-hidden">
+{/* 1. Uporer Purple Banner Section */}
+      <div className="w-full pt-[140px] bg-[#E3E3FF] pb-[420px] relative overflow-hidden max-sm:pt-[90px] max-sm:pb-[300px]">
 
         {/* Banner er vitor shobkichu 1200px container-er moddhe thakbe */}
         <div className="max-w-[1200px] mx-auto px-4 relative">
 
           {/* Left Asset: Rainbow Icon */}
-          <div className="absolute left-4 md:left-8 top-16 hidden lg:block w-28">
+          <motion.div 
+            className="absolute left-4 md:left-8 top-16 hidden lg:block w-28 z-20 pointer-events-none"
+            animate={{ 
+              y: [-10, 10, -10],
+              rotate: [-2, 3, -2]
+            }}
+            transition={{ 
+              duration: 5, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+          >
+            {/* Claude-style Lighting Beams / Sparkles */}
+            <motion.div 
+              className="absolute -top-3 -left-3 w-2 h-2 rounded-full bg-white blur-[1px]"
+              animate={{ scale: [0, 1.5, 0], opacity: [0, 1, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div 
+              className="absolute top-1/2 -right-2 w-1.5 h-1.5 rounded-full bg-purple-400 blur-[1px]"
+              animate={{ scale: [0, 1.8, 0], opacity: [0, 0.8, 0] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+            />
+            <motion.div 
+              className="absolute -bottom-2 left-1/3 w-2 h-2 rounded-full bg-indigo-300 blur-[1px]"
+              animate={{ scale: [0, 1.4, 0], opacity: [0, 1, 0] }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+            />
+
             <img
               src={rainbowImg}
               alt="Rainbow"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain drop-shadow-md"
             />
-          </div>
+          </motion.div>
 
           {/* Right Asset: Paper Airplane Icon */}
-          <div className="absolute right-4 md:right-8 top-5 hidden lg:block w-32">
+          <motion.div 
+            className="absolute right-4 md:right-8 top-5 hidden lg:block w-32 z-20 pointer-events-none"
+            animate={{ 
+              y: [12, -12, 12],
+              rotate: [3, -4, 3],
+              x: [-5, 5, -5]
+            }}
+            transition={{ 
+              duration: 6, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+          >
+            {/* Claude-style Lighting Beams / Sparkles */}
+            <motion.div 
+              className="absolute -top-2 right-4 w-2 h-2 rounded-full bg-white blur-[1px]"
+              animate={{ scale: [0, 1.6, 0], opacity: [0, 1, 0] }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+            />
+            <motion.div 
+              className="absolute bottom-2 -left-3 w-1.5 h-1.5 rounded-full bg-indigo-400 blur-[1px]"
+              animate={{ scale: [0, 1.5, 0], opacity: [0, 0.9, 0] }}
+              transition={{ duration: 1.9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            />
+            <motion.div 
+              className="absolute -bottom-3 right-1/2 w-2 h-2 rounded-full bg-purple-300 blur-[1px]"
+              animate={{ scale: [0, 1.7, 0], opacity: [0, 1, 0] }}
+              transition={{ duration: 2.7, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+            />
+
             <img
               src={planeImg}
               alt="Paper Airplane"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain drop-shadow-md"
             />
-          </div>
+          </motion.div>
 
           {/* Heading & Subtitle */}
-          <div className="max-w-3xl mx-auto text-center relative z-10">
+          <div className="max-w-3xl mx-auto text-center relative z-10 max-sm:w-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -80,15 +136,15 @@ await emailjs.sendForm(
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              <h1 className="text-3xl md:text-5xl font-medium text-[#1D1D1D] tracking-[-2px] mb-[18px] leading-[56px]">
+              <h1 className="text-3xl md:text-5xl font-medium text-[#1D1D1D] tracking-[-2px] mb-[18px] leading-[56px] max-sm:text-[30px] max-sm:leading-[115%] max-sm:tracking-[-1px] max-sm:mb-[14px]">
                 How can I help you with your
                 <br className="hidden sm:block" />
                 next project?
               </h1>
 
-              <p className="text-[#1d1d1d] text-base md:text-[22px] mx-auto font-[350] leading-[150%]">
+              <p className="text-[#1d1d1d] text-base md:text-[22px] mx-auto font-[350] leading-[150%] max-sm:text-[15px] max-sm:leading-[165%] max-sm:max-w-[340px]">
                 Have an idea or a clear vision? Let's turn it into a meaningful
-                <br />
+                <br className="hidden sm:block" />
                 digital experience.
               </p>
             </motion.div>
@@ -98,7 +154,7 @@ await emailjs.sendForm(
       </div>
 
       {/* 2. Nicher Form Card Container */}
-      <div className="max-w-[1200px] mx-auto px-3 sm:px-4 -mt-[280px] relative z-20 pb-20 sm:pb-28 md:pb-[160px]">
+      <div className="max-w-[1200px] mx-auto px-3 sm:px-4 -mt-[280px] relative z-20 pb-20 sm:pb-28 md:pb-[160px] max-sm:-mt-[210px] max-sm:px-4 max-sm:pb-[90px]">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -128,6 +184,11 @@ await emailjs.sendForm(
             md:gap-[70px]
             lg:gap-[120px]
             items-start
+
+            max-sm:px-5
+            max-sm:py-7
+            max-sm:gap-10
+            max-sm:rounded-[18px]
           "
         >
 
@@ -145,6 +206,9 @@ await emailjs.sendForm(
                 tracking-[-1.14px]
                 text-[#1d1d1d]
                 mb-[12px]
+
+                max-sm:text-[27px]
+                max-sm:tracking-[-0.8px]
               ">
                 Let's get in touch
               </h2>
@@ -156,6 +220,9 @@ await emailjs.sendForm(
                 font-[375]
                 text-[#1d1d1d]
                 max-w-[350px]
+
+                max-sm:text-[14px]
+                max-sm:leading-[160%]
               ">
                 Have a project, idea, or opportunity in mind?
                 <br />
@@ -166,10 +233,10 @@ await emailjs.sendForm(
             </div>
 
             {/* Contact Details */}
-            <div className="mt-[48px] sm:mt-[52px] md:mt-[50px] space-y-[30px]">
+            <div className="mt-[48px] sm:mt-[52px] md:mt-[50px] space-y-[30px] max-sm:mt-9 max-sm:space-y-6">
 
               {/* Address */}
-              <div className="flex items-start gap-[25px]">
+              <div className="flex items-start gap-[25px] max-sm:gap-4">
 
                 <div className="
                   w-[40px]
@@ -180,6 +247,9 @@ await emailjs.sendForm(
                   justify-center
                   relative
                   mt-[1px]
+
+                  max-sm:w-[34px]
+                  max-sm:h-[37px]
                 ">
                   <img
                     src={addressIcon}
@@ -196,16 +266,18 @@ await emailjs.sendForm(
                     font-medium
                     text-[#1d1d1d]
                     mb-[5px]
+
+                    max-sm:text-[16px]
                   ">
                     Address
                   </p>
 
                   <p className="
-                    
                     text-[16px]
-                    
                     font-[375]
                     text-[#1d1d1d]
+
+                    max-sm:text-[14px]
                   ">
                     Savar, Dhaka, Bangladesh
                   </p>
@@ -213,7 +285,7 @@ await emailjs.sendForm(
               </div>
 
               {/* Phone */}
-              <div className="flex items-start gap-[25px]">
+              <div className="flex items-start gap-[25px] max-sm:gap-4">
 
                 <div className="
                    w-[40px]
@@ -223,6 +295,9 @@ await emailjs.sendForm(
                   items-center
                   justify-center
                   mt-[0px]
+
+                  max-sm:w-[34px]
+                  max-sm:h-[37px]
                 ">
                   <img
                     src={phoneIcon}
@@ -239,15 +314,18 @@ await emailjs.sendForm(
                     font-medium
                     text-[#1d1d1d]
                     mb-[5px]
+
+                    max-sm:text-[16px]
                   ">
                     Phone
                   </p>
 
                   <p className="
                     text-[16px]
-                    
                     font-[375]
                     text-[#1d1d1d]
+
+                    max-sm:text-[14px]
                   ">
                     +880 1729 324 206
                   </p>
@@ -255,7 +333,7 @@ await emailjs.sendForm(
               </div>
 
               {/* Email */}
-              <div className="flex items-start gap-[25px]">
+              <div className="flex items-start gap-[25px] max-sm:gap-4">
 
                 <div className="
                   w-[40px]
@@ -265,6 +343,9 @@ await emailjs.sendForm(
                   items-center
                   justify-center
                   mt-[0px]
+
+                  max-sm:w-[34px]
+                  max-sm:h-[37px]
                 ">
                   <img
                     src={emailIcon}
@@ -273,7 +354,7 @@ await emailjs.sendForm(
                   />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <p className="
                    text-[18px]
                     sm:text-[18px]
@@ -281,15 +362,19 @@ await emailjs.sendForm(
                     font-medium
                     text-[#1d1d1d]
                     mb-[5px]
+
+                    max-sm:text-[16px]
                   ">
                     E-mail
                   </p>
 
                   <p className="
                     text-[16px]
-                    
                     font-[375]
                     text-[#1d1d1d]
+
+                    max-sm:text-[13px]
+                    max-sm:break-all
                   ">
                     rubel.monpura@gmail.com
                   </p>
@@ -309,7 +394,7 @@ await emailjs.sendForm(
             <div className="w-full">
 
               {/* Name Field */}
-              <div className="mb-[37px]">
+              <div className="mb-[37px] max-sm:mb-7">
                 <label className="
                   block
                   text-[14px]
@@ -350,7 +435,7 @@ await emailjs.sendForm(
               </div>
 
               {/* Email Field */}
-              <div className="mb-[37px]">
+              <div className="mb-[37px] max-sm:mb-7">
                 <label className="
                   block
                   text-[14px]
@@ -428,6 +513,8 @@ await emailjs.sendForm(
                     focus:outline-none
                     focus:border-[#222222]
                     transition-colors
+
+                    max-sm:h-[120px]
                   "
                 />
               </div>
@@ -435,7 +522,7 @@ await emailjs.sendForm(
             </div>
 
 {/* Submit Button */}
-<div className="mt-[40px] sm:mt-[42px]">
+<div className="mt-[40px] sm:mt-[42px] max-sm:mt-8">
   <div className="inline-block border rounded-[10px] border-[#1d1d1d]">
     <button
       type="submit"
@@ -462,6 +549,10 @@ await emailjs.sendForm(
 
         disabled:opacity-60
         disabled:cursor-not-allowed
+
+        max-sm:w-[160px]
+        max-sm:h-[50px]
+        max-sm:text-[13px]
       "
     >
       <span>
@@ -478,7 +569,7 @@ await emailjs.sendForm(
       status.includes('successfully')
         ? 'text-green-600'
         : 'text-red-500'
-    }`}
+    } max-sm:text-[12px]`}
   >
     {status}
   </p>
@@ -490,8 +581,8 @@ await emailjs.sendForm(
       </div>
 
       {/* 3. FAQ / Need More Details Section */}
-<section className="w-full bg-white pb-[190px]">
-  <div className="w-full max-w-[1200px] mx-auto px-[120px]">
+<section className="w-full bg-white pb-[190px] max-sm:pb-[90px]">
+  <div className="w-full max-w-[1200px] mx-auto px-[120px] max-sm:px-4">
 
     {/* FAQ Heading */}
     <motion.div
@@ -504,19 +595,19 @@ await emailjs.sendForm(
       }}
       className="text-center"
     >
-      <h2 className="text-[48px]  font-medium tracking-[-2px] text-[#1d1d1d]">
+      <h2 className="text-[48px] font-medium tracking-[-2px] text-[#1d1d1d] max-sm:text-[30px] max-sm:leading-[115%] max-sm:tracking-[-1px]">
         Need more details?
       </h2>
 
-      <p className="mt-[18px] text-[22px] leading-[150%] font[350] text-[#1d1d1d]">
+      <p className="mt-[18px] text-[22px] leading-[150%] font[350] text-[#1d1d1d] max-sm:mt-3 max-sm:text-[15px] max-sm:leading-[165%]">
         A few answers to the questions clients often have before
-        <br />
+        <br className="hidden sm:block" />
         starting a project together.
       </p>
     </motion.div>
 
     {/* FAQ Items */}
-    <div className="mt-[70px] flex flex-col gap-[25px]">
+    <div className="mt-[70px] flex flex-col gap-[25px] max-sm:mt-9 max-sm:gap-4">
 
       {[
         {
@@ -561,7 +652,7 @@ await emailjs.sendForm(
             className="w-full"
           >
 
-            <div className="w-full rounded-[20px] border-[1px] border-[#1d1d1d] bg-white overflow-hidden">
+            <div className="w-full rounded-[20px] border-[1px] border-[#1d1d1d] bg-white overflow-hidden max-sm:rounded-[16px]">
 
               {/* Question */}
               <button
@@ -583,6 +674,12 @@ await emailjs.sendForm(
                   tracking-[-0.4px]
                   text-[#1d1d1d]
                   outline-none
+
+                  max-sm:min-h-[60px]
+                  max-sm:px-4
+                  max-sm:text-[15px]
+                  max-sm:leading-[140%]
+                  max-sm:tracking-[-0.2px]
                 "
               >
                 <span>{faq.question}</span>
@@ -603,6 +700,11 @@ await emailjs.sendForm(
     h-5
     leading-none
     font-normal
+
+    max-sm:ml-3
+    max-sm:text-[20px]
+    max-sm:w-4
+    max-sm:h-4
   "
 >
   {isOpen ? "-" : "+"}
@@ -629,7 +731,7 @@ await emailjs.sendForm(
                 className="grid overflow-hidden"
               >
                 <div className="min-h-0 overflow-hidden">
-                  <div className="px-[21px] pb-[18px]  text-[16px] leading-[26px] font-[375] tracking-[-0.4px] text-[#1d1d1d]">
+                  <div className="px-[21px] pb-[18px] text-[16px] leading-[26px] font-[375] tracking-[-0.4px] text-[#1d1d1d] max-sm:px-4 max-sm:pb-4 max-sm:text-[14px] max-sm:leading-[155%] max-sm:tracking-[-0.2px]">
                     {faq.answer}
                   </div>
                 </div>
@@ -651,4 +753,3 @@ await emailjs.sendForm(
 };
 
 export default Contact;
-
