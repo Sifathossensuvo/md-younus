@@ -16,16 +16,16 @@ const Review = () => {
       id: 1,
       quote:
         "“Working with Younus was effortless from day one. He consistently turned ideas into thoughtful, polished designs, bringing clarity to every challenge and delivering results that exceeded our expectations.”",
-      name: "David Kauzlaric",
-      role: "Co-founder of Agency Elevation",
+      name: "Kas Andz",
+      role: "Founder & CEO of KAMG",
       image: user2,
     },
     {
       id: 2,
       quote:
         "“Younus brought a thoughtful approach to every project. He understood our goals quickly, turned complex ideas into clear designs, and consistently delivered work that felt polished and purposeful.”",
-      name: "Kas Andz",
-      role: "Founder & CEO of KAMG",
+      name: "David Kauzlaric",
+      role: "Co-founder of Agency Elevation",
       image: user1,
     },
     {
