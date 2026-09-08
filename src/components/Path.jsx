@@ -35,7 +35,7 @@ const Path = () => {
       image: process3,
     },
     {
-      id: "(04)",
+      id: "04",
       title: "Refine & Deliver",
       description:
         "I obsess over the details that make a product feel complete. From usability and visual consistency to responsive behavior, I refine, test, and prepare the final experience for real-world use.",
