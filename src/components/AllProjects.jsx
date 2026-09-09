@@ -195,221 +195,221 @@ const allWorksData = [
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Hexitime - Web App & Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work17,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://hexitime.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Hurley Write - Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work18,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://www.hurleywrite.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Ledger Union Market - Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work19,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://ledgerunionmarket-com.azurewebsites.net/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Couples Retreat - Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work20,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://couplesretreatatoceancoral.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Strategy Ladders - Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work21,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://www.strategyladders.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Bulgarian Businesses - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "fome agency",
+    studioLink: "https://fome.agency/",
     image: work22,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://bulgarianbusinesses.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Fome Female - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "fome agency",
+    studioLink: "https://fome.agency/",
     image: work23,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://fome.agency/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Trivr Eats - Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work24,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://trivreats.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Lifetime Land USA - Website Design",
     category: "ui/ux designer",
     studio: "Kamg",
     studioLink: "https://kasandz.com/",
     image: work25,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://lifetimelandusa.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Redmile Homes - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work26,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://redmilehomes.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Wellington Corporate Stays - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work27,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://wellingtonstays.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Medhut - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work28,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://www.medhut.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "The travel fox - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work29,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://thetravelfox.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "CRCI - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work30,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://casualtyriskconsulting.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Physio Brite - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work31,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://physiobrite.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "UK Search Limited - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work32,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://www.uksearchlimited.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Mullock Accountancy - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work33,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://mullockaccountancy.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Renewfood - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work34,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://renewfood.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Elements Green Limited - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work35,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://elementsgreen.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "YPIP - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work36,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://ypip.org.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Wizard Guitars - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work37,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://wizardguitars.com/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "LWT Dental Care - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work38,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://www.lwtdentalcare.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "VeryPC - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work39,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://very-pc.co.uk/"
   },
   {
     id: 1,
-    title: "Vistafolia - Website Design",
+    title: "Oven Revive - Website Design",
     category: "ui/ux designer",
-    studio: "Kamg",
-    studioLink: "https://kasandz.com/",
+    studio: "Edge Studio",
+    studioLink: "https://edge.studio/",
     image: work40,
-    liveLink: "https://vistafolia.com/gb/"
+    liveLink: "https://www.ovenrevive.co.uk/"
   },
- 
+  
 ];
 
 
