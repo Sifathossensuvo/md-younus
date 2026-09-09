@@ -216,29 +216,79 @@ const Navbar = () => {
 
           {/* Mobile Social Icons */}
           <div className="mt-auto flex items-center gap-2">
-            <a
-              href="#"
-              aria-label="X"
-              className="flex h-9 w-9 items-center justify-center rounded-[9px] border border-gray-500 text-black transition-all duration-300 hover:bg-black hover:text-white"
-            >
-              <FaXTwitter className="text-[15px]" />
-            </a>
+<div className="border rounded-[10px] border-[#1d1d1d]">
+  <a
+  href="https://www.linkedin.com/in/rubelhossen26/"
+  aria-label="X"
+  target="_blank"
+  className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
+>
+ 
+   {/* icon first */}
+  <img
+    className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+    src={linkedin}
+    alt=""
+  />
+  {/* icon second */}
+  <img
+    className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+    src={linkedinhover}
+    alt=""
+  />
+ 
+</a>
+</div>
 
-            <a
-              href="#"
-              aria-label="Dribbble"
-              className="flex h-9 w-9 items-center justify-center rounded-[9px] border border-gray-500 text-black transition-all duration-300 hover:bg-black hover:text-white"
-            >
-              <FaDribbble className="text-[15px]" />
-            </a>
+<div className="border rounded-[10px] border-[#1d1d1d]">
+  <a
+  href="https://dribbble.com/rubelhossen"
+  aria-label="X"
+  target="_blank"
+  className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
+>
+ 
+   {/* icon first */}
+  <img
+    className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+    src={dribbble}
+    alt=""
+  />
+  {/* icon second */}
+  <img
+    className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+    src={dribbblehover}
+    alt=""
+  />
+ 
+</a>
+</div>
 
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="flex h-9 w-9 items-center justify-center rounded-[9px] border border-gray-500 text-black transition-all duration-300 hover:bg-black hover:text-white"
-            >
-              <FaInstagram className="text-[15px]" />
-            </a>
+<div className="border rounded-[10px] border-[#1d1d1d]">
+  <a
+  href="https://www.behance.net/rubelhossen"
+  target="_blank"
+  aria-label="X"
+  className="group flex Z-0 h-[38px] w-[38px] items-center shadow-inner  justify-center rounded-[10px] border-b-4 border-[#ddd] text-[#1d1d1d] transition-all duration-300 relative "
+>
+ 
+   {/* icon first */}
+  <img
+    className=" absolute block transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+    src={behance}
+    alt=""
+  />
+  {/* icon second */}
+  <img
+    className="absolute block transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+    src={behancehover}
+    alt=""
+  />
+ 
+</a>
+</div>
+
+
           </div>
         </div>
       </div>
